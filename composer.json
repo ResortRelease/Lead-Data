@@ -1,0 +1,25 @@
+{
+    "name": "marketing5/lead-data",
+    "description": "Lead Data",
+    "license": "GPL-2.0",
+    "scripts": {
+        "postinstall": "gulp copy-assets"
+    },
+    "require": {
+        "monolog/monolog": "^1.24",
+        "php": ">5.3.0",
+        "league/csv": "^9.0@dev",
+        "aws/aws-sdk-php" : "^3.0@dev",
+        "twbs/bootstrap": "4.3.1"
+    },
+    "autoload": {
+        "psr-4": {"Acme\\": "src/"}
+    },
+    "authors": [
+        {
+            "name": "Alfredo Perez",
+            "email": "alfredop@resortrelease.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
