@@ -10,7 +10,9 @@
         "php": ">5.3.0",
         "league/csv": "^9.0@dev",
         "aws/aws-sdk-php" : "^3.0@dev",
-        "twbs/bootstrap": "4.3.1"
+        "twbs/bootstrap": "4.3.1",
+        "keboola/csv": "dev-master",
+        "components/jquery": "dev-master"
     },
     "autoload": {
         "psr-4": {"Acme\\": "src/"}

@@ -30,6 +30,10 @@ class ComposerStaticInit19ae118db4864d7874c143feaf449786
         array (
             'League\\Csv\\' => 11,
         ),
+        'K' => 
+        array (
+            'Keboola\\Csv\\' => 12,
+        ),
         'J' => 
         array (
             'JmesPath\\' => 9,
@@ -63,6 +67,10 @@ class ComposerStaticInit19ae118db4864d7874c143feaf449786
         'League\\Csv\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/csv/src',
+        ),
+        'Keboola\\Csv\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/keboola/csv/src',
         ),
         'JmesPath\\' => 
         array (
