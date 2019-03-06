@@ -3,7 +3,8 @@ require_once __DIR__ . '/vendor/autoload.php';
 use Aws\S3\S3Client;
 use Aws\S3\Exception\S3Exception;
 include('src/Initialize.php');
-  echo 'RELOAD';
+    // Delete the whole table first
+    $result = mysqli_query($conn, "TRUNCATE TABLE `leads-tbl`");
     // Open the file
     $file = fopen("localFile.csv", "r");
     while (($column = fgetcsv($file, 10000, ",")) !== FALSE) {

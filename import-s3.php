@@ -43,7 +43,4 @@
     // $fileName = $_FILES["file"]["tmp_name"];
     $fileName = file_get_contents('localFile.csv');
 
-    // Delete the whole table first
-    $result = mysqli_query($conn, "TRUNCATE TABLE `leads-tbl`");
-
 ?>
