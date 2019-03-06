@@ -44,10 +44,26 @@ $(function () {
         $('#response').html("Success").show().addClass('success'); // alert on success
       },
       error: function (data) {
-        $('#response').html(data).show().addClass('error'); // alert on success
+        $('#response').html(data).show().addClass('error'); // alert on error
       }
     });
-
+  });
+  $('#reload').on('submit', function (e) {
+    e.preventDefault();
+    $.ajax({
+      type: 'POST',
+      dataType: "html",
+      url: 'reload.php',
+      beforeSend: function() {
+        $("#response").html('Loading...').show().addClass('success');
+      },
+      success: function(data) {
+        $('#response').html(data).show().addClass('success'); // alert on success
+      },
+      error: function (data) {
+        $('#response').html(data).show().addClass('error'); // alert on error
+      }
+    });
   });
 });
 </script>
