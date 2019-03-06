@@ -164,3 +164,4 @@ if (isset($_POST["import"])) {
 </script>
 
 </html>
+<?php mysqli_close($conn); ?>

@@ -3,23 +3,29 @@ use Aws\S3\S3Client;
 use Aws\S3\Exception\S3Exception;
 // Connect To DB
 $conn = mysqli_connect("localhost", "root", "test1", "leads-db");
-
 // Check connection
 if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 if (isset($_POST["s3Import"])) {
-    echo '<script>console.log("S3 Import");</script>';
     $bucket = 'rr-data-test';
     $keyname = 'export-mk.csv';
     $credentials = new Aws\Credentials\Credentials('AKIAIWLNEEBTI5KQYA5A', '0zrQ+pLYgXx4naWYeOW9izz2cboLbBpeCPuDbtl/');
-    $s3 = new S3Client([
-        'version' => 'latest',
-        'region'  => 'us-east-1',
-        'credentials' => $credentials,
-        'ssl.certificate_authority' => 'ca-cert.pem',
-        'scheme' => 'http'
-    ]);
+    if($_SERVER[HTTP_ORIGIN] == "http://lead-data"){
+        $s3 = new S3Client([
+            'version' => 'latest',
+            'region'  => 'us-east-1',
+            'credentials' => $credentials,
+            'ssl.certificate_authority' => 'ca-cert.pem',
+            'scheme' => 'http'
+        ]);
+    } else {
+        $s3 = new S3Client([
+            'version' => 'latest',
+            'region'  => 'us-east-1',
+            'credentials' => $credentials,
+        ]);
+    }
     $result = $s3->getObject([
         'Bucket' => $bucket,
         'Key'    => $keyname,
