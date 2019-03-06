@@ -43,7 +43,7 @@ $(function () {
       success: function(data) {
         $('#response').html("Success").show().addClass('success'); // alert on success
       },
-      error: function (xhr, ajaxOptions, thrownError) {
+      error: function (data) {
         $('#response').html(data).show().addClass('error'); // alert on success
       }
     });

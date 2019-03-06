@@ -63,7 +63,7 @@
         } else {
             $type = "error";
             // $message = "Problem in Importing CSV Data";
-            $message = mysqli_error($conn);
+            echo mysqli_error($conn);
         }
     }
     fclose($file);
