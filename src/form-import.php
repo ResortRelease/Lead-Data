@@ -13,7 +13,7 @@
       Import List and Update<br><br>
       <form class="form-horizontal" action="" method="post" name="s3Import" id="s3Import" enctype="multipart/form-data">
         <div class="input-row">
-          <button type="submit" id="submit" name="s3Import" class="btn-submit">Import From AWS S3</button>
+          <button type="submit" id="getData" name="s3Import" class="btn-submit">Import From AWS S3</button>
           <br />
         </div>
       </form>
@@ -29,3 +29,22 @@
     </li>
   </ol>
 </div>
+<script>
+$(function () {
+  $('#s3Import').on('submit', function (e) {
+    e.preventDefault();
+    $.ajax({
+      type: 'POST',
+      dataType: "html",
+      url: 'import-s3.php',
+      beforeSend: function() {
+        $("#response").html('Loading...').show().addClass('success');
+      },
+      success: function(data) {
+        $('#response').html("Success").show().addClass('success'); // alert on success
+      }
+    });
+
+  });
+});
+</script>

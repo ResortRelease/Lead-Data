@@ -123,7 +123,7 @@ if (isset($_POST["import"])) {
 	</style>
 </head>
 <body>
-	<h2>Import CSV file into Mysql using PHP</h2>
+	<h2>Import S3 CSV file</h2>
 	<div id="response" class="<?php if(!empty($type)) { echo $type . " display-block"; } ?>">
 		<?php if(!empty($message)) { echo $message; } ?>
 	</div>
