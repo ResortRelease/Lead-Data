@@ -4,6 +4,11 @@ require_once __DIR__ . '/src/Initialize.php';
 use Aws\S3\S3Client;
 use Aws\S3\Exception\S3Exception;
 
+include('src/Initialize.php');
+
+// Delete the whole table first
+$result = mysqli_query($conn, "TRUNCATE TABLE `leads-tbl`");
+
 echo "<style>#myProgress {
     width: 50%;
     background-color: #ccc;
@@ -29,11 +34,9 @@ include('src/body.php');
 function updateDB($conn,$currentRecord,$totalNumRecords) {
     $totalNumRecords = count(file("localFile.csv"));
     $currentRecord = 0;
-    // Delete the whole table first
-    $result = mysqli_query($conn, "TRUNCATE TABLE `leads-tbl`");
     // Open the file
     $file = fopen("localFile.csv", "r");
-    while (($column = fgetcsv("localFile.csv", 10000, ",")) !== FALSE) {
+    while (($column = fgetcsv($file, 10000, ",")) !== FALSE) {
         $myinput=$column[8];
         $datecr=date('Y-m-d',strtotime($column[8]));
         $dateASAP=date('Y-m-d',strtotime($column[9]));
@@ -58,7 +61,9 @@ function updateDB($conn,$currentRecord,$totalNumRecords) {
             echo mysqli_error($conn);
         }
     }
+
     fclose($file);
 }
 updateDB($conn,$currentRecord,$totalNumRecords); // call the function
+mysqli_close($conn);
 ?>

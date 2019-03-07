@@ -92,7 +92,9 @@
 		<?php if(!empty($message)) { echo $message; } ?>
 	</div>
 	<div class="outer-scontainer container-fluid">
-		<?php include('src/form-import.php'); ?>
+    <?php include('src/form-import.php'); ?>
+    <h1>This Month Revenue</h1>
+		<?php include('src/this-month-revenue.php') ?>
 		<h1>Leads This Month</h1>
 		<?php include('src/this-month-leads.php') ?>
 		<br><br>
