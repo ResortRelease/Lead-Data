@@ -34,4 +34,5 @@ if (isset($_POST["import"])) {
     }
 }
 include('src/body.php');
+include('promise.php');
 mysqli_close($conn); ?>

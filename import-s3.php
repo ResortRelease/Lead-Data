@@ -1,10 +1,12 @@
 <?php 
     require_once __DIR__ . '/vendor/autoload.php';
+    require_once __DIR__ . '/src/Initialize.php';
     use Aws\S3\S3Client;
     use Aws\S3\Exception\S3Exception;
-    include('src/Initialize.php');
+
     $bucket = 'rr-data-test';
     $keyname = 'export-mk.csv';
+    $credentials = new Aws\Credentials\Credentials('AKIAIWLNEEBTI5KQYA5A', '0zrQ+pLYgXx4naWYeOW9izz2cboLbBpeCPuDbtl/');
     
     if($_SERVER[HTTP_ORIGIN] == "http://lead-data"){
         $s3 = new S3Client([
@@ -42,7 +44,7 @@
     $file = file_put_contents('localFile.csv', $result['Body']);
     // $fileName = $_FILES["file"]["tmp_name"];
     $fileName = file_get_contents('localFile.csv');
-    $page = 'update-DB.php';
+    $page = '/';
     header('Location: '.$page, true, 303);
     exit;
 ?>
