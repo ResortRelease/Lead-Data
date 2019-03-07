@@ -25,7 +25,7 @@
       </form>
     </li>
     <li>
-      Reload Page<br><br>
+      Reload Database<br><br>
       <form class="form-horizontal" action="/" method="post" name="reload" id="reload" enctype="multipart/form-data">
         <div class="input-row">
           <button type="submit" id="submit" name="reload" class="btn-submit" style="width:50px"><img src="/reload.png" alt="reload" width="100%"></button>
