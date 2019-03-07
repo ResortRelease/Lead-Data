@@ -42,5 +42,7 @@
     $file = file_put_contents('localFile.csv', $result['Body']);
     // $fileName = $_FILES["file"]["tmp_name"];
     $fileName = file_get_contents('localFile.csv');
-
+    $page = 'update-DB.php';
+    header('Location: '.$page, true, 303);
+    exit;
 ?>
