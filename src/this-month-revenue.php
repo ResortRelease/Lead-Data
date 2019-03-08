@@ -544,7 +544,7 @@
         <?php echo $bbbc ?>
       </td>
       <td>
-        <?php echo $bbbrev ?>
+        $ <?php echo number_format($bbbrev) ?>
       </td>
     </tr>
     <tr style="<?php if($bbbt == 0) {echo " display:none";}?>">
@@ -559,7 +559,7 @@
         <?php echo $bbbtc ?>
       </td>
       <td>
-        <?php echo $bbbtrev ?>
+        $ <?php echo number_format($bbbtrev) ?>
       </td>
     </tr>
     <tr style="<?php if($bbbe == 0) {echo " display:none";}?>">
@@ -574,7 +574,7 @@
         <?php echo $bbbec ?>
       </td>
       <td>
-        <?php echo $bbberev ?>
+        $ <?php echo number_format($bbberev) ?>
       </td>
     </tr>
     <tr style="<?php if($bbbm == 0) {echo " display:none";}?>">
@@ -589,7 +589,7 @@
         <?php echo $bbbmc ?>
       </td>
       <td>
-        <?php echo $bbbmrev ?>
+        $ <?php echo number_format($bbbmrev) ?>
       </td>
     </tr>
     <tr style="<?php if($bbbr == 0) {echo " display:none";}?>">
@@ -604,7 +604,7 @@
         <?php echo $bbbrc ?>
       </td>
       <td>
-        <?php echo $bbbrrev ?>
+        $ <?php echo number_format($bbbrrev) ?>
       </td>
     </tr>
     <!-- ************************ -->
@@ -618,7 +618,7 @@
         <?php echo $fbc ?>
       </td>
       <td>
-        <?php echo $fbrev ?>
+        $ <?php echo number_format($fbrev) ?>
       </td>
     </tr>
     <tr style="<?php if($fbt == 0) {echo " display:none";}?>">
@@ -633,7 +633,7 @@
         <?php echo $fbtc ?>
       </td>
       <td>
-        <?php echo $fbtrev ?>
+        $ <?php echo number_format($fbtrev) ?>
       </td>
     </tr>
     <tr style="<?php if($fbe == 0) {echo " display:none";}?>">
@@ -648,6 +648,7 @@
         <?php echo $fbec ?>
       </td>
       <td>
+        $ <?php echo number_format($fberev) ?>
       </td>
     </tr>
     <tr style="<?php if($fbm == 0) {echo " display:none";}?>">
@@ -662,6 +663,7 @@
         <?php echo $fbmc ?>
       </td>
       <td>
+        $ <?php echo number_format($fbmrev) ?>
       </td>
     </tr>
     <tr style="<?php if($fbr == 0) {echo " display:none";}?>">
@@ -676,6 +678,7 @@
         <?php echo $fbrc ?>
       </td>
       <td>
+        $ <?php echo number_format($fbrrev) ?>
       </td>
     </tr>
     <!-- ************************ -->
@@ -689,7 +692,7 @@
         <?php echo $fmc ?>
       </td>
       <td>
-        <?php echo $fmrev ?>
+        $ <?php echo number_format($fmrev) ?>
       </td>
     </tr>
     <tr style="<?php if($fmt == 0) {echo " display:none";}?>">
@@ -704,7 +707,7 @@
         <?php echo $fmtc ?>
       </td>
       <td>
-        <?php echo $fmtrev ?>
+        $ <?php echo number_format($fmtrev) ?>
       </td>
     </tr>
     <tr style="<?php if($fme == 0) {echo " display:none";}?>">
@@ -719,7 +722,7 @@
         <?php echo $fmec ?>
       </td>
       <td>
-        <?php echo $fmerev ?>
+        $ <?php echo number_format($fmerev) ?>
       </td>
     </tr>
     <tr style="<?php if($fmm == 0) {echo " display:none";}?>">
@@ -734,7 +737,7 @@
         <?php echo $fmmc ?>
       </td>
       <td>
-        <?php echo $fmmrev ?>
+        $ <?php echo number_format($fmmrev) ?>
       </td>
     </tr>
     <tr style="<?php if($fmr == 0) {echo " display:none";}?>">
@@ -749,7 +752,7 @@
         <?php echo $fmrc ?>
       </td>
       <td>
-        <?php echo $fmrrev ?>
+        $ <?php echo number_format($fmrrev) ?>
       </td>
     </tr>
     <!-- ************************ -->
@@ -764,7 +767,7 @@
         <?php echo $fcc ?>
       </td>
       <td>
-        <?php echo $fcrev ?>
+        $ <?php echo number_format($fcrev) ?>
       </td>
     </tr>
     <tr style="<?php if($fct == 0) {echo " display:none";}?>">
@@ -779,7 +782,7 @@
         <?php echo $fctc ?>
       </td>
       <td>
-        <?php echo $fctrev ?>
+        $ <?php echo number_format($fctrev) ?>
       </td>
     </tr>
     <tr style="<?php if($fce == 0) {echo " display:none";}?>">
@@ -794,7 +797,7 @@
         <?php echo $fcec ?>
       </td>
       <td>
-        <?php echo $fcerev ?>
+        $ <?php echo number_format($fcerev) ?>
       </td>
     </tr>
     <tr style="<?php if($fcm == 0) {echo " display:none";}?>">
@@ -809,7 +812,7 @@
         <?php echo $fcmc ?>
       </td>
       <td>
-        <?php echo $fcmrev ?>
+        $ <?php echo number_format($fcmrev) ?>
       </td>
     </tr>
     <tr style="<?php if($fcr == 0) {echo " display:none";}?>">
@@ -824,7 +827,7 @@
         <?php echo $fcrc ?>
       </td>
       <td>
-        <?php echo $fcrmrev ?>
+        $ <?php echo number_format($fcrmrev) ?>
       </td>
     </tr>
     <!-- ************************ -->
@@ -838,7 +841,7 @@
         <?php echo $icc ?>
       </td>
       <td>
-        <?php echo $icrev ?>
+        $ <?php echo number_format($icrev) ?>
       </td>
     </tr>
     <tr style="<?php if($ict == 0) {echo " display:none";}?>">
@@ -853,7 +856,7 @@
         <?php echo $ictc ?>
       </td>
       <td>
-        <?php echo $ictrev ?>
+        $ <?php echo number_format($ictrev) ?>
       </td>
     </tr>
     <tr style="<?php if($ice == 0) {echo " display:none";}?>">
@@ -868,7 +871,7 @@
         <?php echo $icec ?>
       </td>
       <td>
-        <?php echo $icerev ?>
+        $ <?php echo number_format($icerev) ?>
       </td>
     </tr>
     <tr style="<?php if($icm == 0) {echo " display:none";}?>">
@@ -883,7 +886,7 @@
         <?php echo $icmc ?>
       </td>
       <td>
-        <?php echo $icmrev ?>
+        $ <?php echo number_format($icmrev) ?>
       </td>
     </tr>
     <tr style="<?php if($icr == 0) {echo " display:none";}?>">
@@ -898,7 +901,7 @@
         <?php echo $icrc ?>
       </td>
       <td>
-        <?php echo $icrrev ?>
+        $ <?php echo number_format($icrrev) ?>
       </td>
     </tr>
     <!-- ************************ -->
@@ -912,7 +915,7 @@
         <?php echo $ogc ?>
       </td>
       <td>
-        <?php echo $ogrev ?>
+        $ <?php echo number_format($ogrev) ?>
       </td>
     </tr>
     <tr style="<?php if($ogt == 0) {echo " display:none";}?>">
@@ -927,7 +930,7 @@
         <?php echo $ogtc ?>
       </td>
       <td>
-        <?php echo $ogtrev ?>
+        $ <?php echo number_format($ogtrev) ?>
       </td>
     </tr>
     <tr style="<?php if($oge == 0) {echo " display:none";}?>">
@@ -942,7 +945,7 @@
         <?php echo $ogec ?>
       </td>
       <td>
-        <?php echo $ogerev ?>
+        $ <?php echo number_format($ogerev) ?>
       </td>
     </tr>
     <tr style="<?php if($ogm == 0) {echo " display:none";}?>">
@@ -957,7 +960,7 @@
         <?php echo $ogmc ?>
       </td>
       <td>
-        <?php echo $ogmrev ?>
+        $ <?php echo number_format($ogmrev) ?>
       </td>
     </tr>
     <tr style="<?php if($ogr == 0) {echo " display:none";}?>">
@@ -972,7 +975,7 @@
         <?php echo $ogrc ?>
       </td>
       <td>
-        <?php echo $ogrrev ?>
+        $ <?php echo number_format($ogrrev) ?>
       </td>
     </tr>
     <!-- ************************ -->
@@ -986,7 +989,7 @@
         <?php echo $otc ?>
       </td>
       <td>
-        <?php echo $otrev ?>
+        $ <?php echo number_format($otrev) ?>
       </td>
     </tr>
     <tr style="<?php if($ott == 0) {echo " display:none";}?>">
@@ -1001,7 +1004,7 @@
         <?php echo $ottc ?>
       </td>
       <td>
-        <?php echo $ottrev ?>
+        $ <?php echo number_format($ottrev) ?>
       </td>
     </tr>
     <tr style="<?php if($ote == 0) {echo " display:none";}?>">
@@ -1016,7 +1019,7 @@
         <?php echo $otec ?>
       </td>
       <td>
-        <?php echo $oterev ?>
+        $ <?php echo number_format($oterev) ?>
       </td>
     </tr>
     <tr style="<?php if($otm == 0) {echo " display:none";}?>">
@@ -1031,7 +1034,7 @@
         <?php echo $otmc ?>
       </td>
       <td>
-        <?php echo $otmrev ?>
+        $ <?php echo number_format($otmrev) ?>
       </td>
     </tr>
     <tr style="<?php if($otr == 0) {echo " display:none";}?>">
@@ -1046,7 +1049,7 @@
         <?php echo $otrc ?>
       </td>
       <td>
-        <?php echo $otrrev ?>
+        $ <?php echo number_format($otrrev) ?>
       </td>
     </tr>
     <!-- ************************ -->
@@ -1060,7 +1063,7 @@
         <?php echo $ppcc ?>
       </td>
       <td>
-        <?php echo $ppcrev ?>
+        $ <?php echo number_format($ppcrev) ?>
       </td>
     </tr>
     <tr style="<?php if($ppct == 0) {echo " display:none";}?>">
@@ -1075,7 +1078,7 @@
         <?php echo $ppctc ?>
       </td>
       <td>
-        <?php echo $ppctrev ?>
+        $ <?php echo number_format($ppctrev) ?>
       </td>
     </tr>
     <tr style="<?php if($ppce == 0) {echo " display:none";}?>">
@@ -1090,7 +1093,7 @@
         <?php echo $ppcec ?>
       </td>
       <td>
-        <?php echo $ppcerev ?>
+        $ <?php echo number_format($ppcerev) ?>
       </td>
     </tr>
     <tr style="<?php if($ppcm == 0) {echo " display:none";}?>">
@@ -1105,7 +1108,7 @@
         <?php echo $ppcmc ?>
       </td>
       <td>
-        <?php echo $ppcmrev ?>
+        $ <?php echo number_format($ppcmrev) ?>
       </td>
     </tr>
     <tr style="<?php if($ppcr == 0) {echo " display:none";}?>">
@@ -1120,7 +1123,7 @@
         <?php echo $ppcrc ?>
       </td>
       <td>
-        <?php echo $ppcrrev ?>
+        $ <?php echo number_format($ppcrrev) ?>
       </td>
     </tr>
     <!-- ************************ -->
@@ -1134,7 +1137,7 @@
         <?php echo $rac ?>
       </td>
       <td>
-        <?php echo $rarev ?>
+        $ <?php echo number_format($rarev) ?>
       </td>
     </tr>
     <tr style="<?php if($rat == 0) {echo " display:none";}?>">
@@ -1149,7 +1152,7 @@
         <?php echo $ratc ?>
       </td>
       <td>
-        <?php echo $ratrev ?>
+        $ <?php echo number_format($ratrev) ?>
       </td>
     </tr>
     <tr style="<?php if($rae == 0) {echo " display:none";}?>">
@@ -1164,7 +1167,7 @@
         <?php echo $raec ?>
       </td>
       <td>
-        <?php echo $raerev ?>
+        $ <?php echo number_format($raerev) ?>
       </td>
     </tr>
     <tr style="<?php if($ram == 0) {echo " display:none";}?>">
@@ -1179,7 +1182,7 @@
         <?php echo $ramc ?>
       </td>
       <td>
-        <?php echo $ramrev ?>
+        $ <?php echo number_format($ramrev) ?>
       </td>
     </tr>
     <tr style="<?php if($rar == 0) {echo " display:none";}?>">
@@ -1194,7 +1197,7 @@
         <?php echo $rarc ?>
       </td>
       <td>
-        <?php echo $rarrev ?>
+        $ <?php echo number_format($rarrev) ?>
       </td>
     </tr>
     <!-- ************************ -->
@@ -1208,7 +1211,7 @@
         <?php echo $refc ?>
       </td>
       <td>
-        <?php echo $refrev ?>
+        $ <?php echo number_format($refrev) ?>
       </td>
     </tr>
     <tr style="<?php if($reft == 0) {echo " display:none";}?>">
@@ -1223,7 +1226,7 @@
         <?php echo $reftc ?>
       </td>
       <td>
-        <?php echo $refrrev ?>
+        $ <?php echo number_format($refrrev) ?>
       </td>
     </tr>
     <tr style="<?php if($refe == 0) {echo " display:none";}?>">
@@ -1238,7 +1241,7 @@
         <?php echo $refec ?>
       </td>
       <td>
-        <?php echo $referev ?>
+        $ <?php echo number_format($referev) ?>
       </td>
     </tr>
     <tr style="<?php if($refm == 0) {echo " display:none";}?>">
@@ -1253,7 +1256,7 @@
         <?php echo $refmc ?>
       </td>
       <td>
-        <?php echo $refmrev ?>
+        $ <?php echo number_format($refmrev) ?>
       </td>
     </tr>
     <tr style="<?php if($refr == 0) {echo " display:none";}?>">
@@ -1268,7 +1271,7 @@
         <?php echo $refrc ?>
       </td>
       <td>
-        <?php echo $refrrev ?>
+        $ <?php echo number_format($refrrev) ?>
       </td>
     </tr>
     <!-- ************************ -->
@@ -1282,7 +1285,7 @@
         <?php echo $tvc ?>
       </td>
       <td>
-        <?php echo $tvrev ?>
+        $ <?php echo number_format($tvrev) ?>
       </td>
     </tr>
     <tr style="<?php if($tvt == 0) {echo " display:none";}?>">
@@ -1297,7 +1300,7 @@
         <?php echo $tvtc ?>
       </td>
       <td>
-        <?php echo $tvtrev ?>
+        $ <?php echo number_format($tvtrev) ?>
       </td>
     </tr>
     <tr style="<?php if($tve == 0) {echo " display:none";}?>">
@@ -1312,7 +1315,7 @@
         <?php echo $tvec ?>
       </td>
       <td>
-        <?php echo $tverev ?>
+        $ <?php echo number_format($tverev) ?>
       </td>
     </tr>
     <tr style="<?php if($tvm == 0) {echo " display:none";}?>">
@@ -1327,7 +1330,7 @@
         <?php echo $tvmc ?>
       </td>
       <td>
-        <?php echo $tvmrev ?>
+        $ <?php echo number_format($tvmrev) ?>
       </td>
     </tr>
     <tr style="<?php if($tvr == 0) {echo " display:none";}?>">
@@ -1342,7 +1345,7 @@
         <?php echo $tvrc ?>
       </td>
       <td>
-        <?php echo $tvrrev ?>
+        $ <?php echo number_format($tvrrev) ?>
       </td>
     </tr>
     <!-- ************************ -->
@@ -1356,7 +1359,7 @@
         <?php echo $Cancelled ?>
       </td>
       <td>
-        <?php echo $TotalRev ?>
+        $ <?php echo number_format($TotalRev) ?>
       </td>
     </tr>
   </tbody>
