@@ -26,12 +26,7 @@
     </li>
     <li>
       Reload Database<br><br>
-      <form class="form-horizontal" action="/" method="post" name="reload" id="reload" enctype="multipart/form-data">
-        <div class="input-row">
-          <button type="submit" id="submit" name="reload" class="btn-submit" style="width:50px"><img src="/reload.png" alt="reload" width="100%"></button>
-          <br />
-        </div>
-      </form>
+      <a href="/"><button name="reload" class="btn-submit" style="width:50px"><img src="/reload.png" alt="reload" width="100%"></button></a>
     </li>
   </ol>
   <h2>Select Dates</h2>
