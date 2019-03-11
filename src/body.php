@@ -93,23 +93,6 @@
 	</div>
 	<div class="outer-scontainer container-fluid">
     <?php include('src/form-import.php'); ?>
-    <h2>Select Dates</h2>
-    <form class="form-horizontal" action="" method="post" name="clear-table" id="dates" enctype="multipart/form-data">
-        <div class="input-row">
-        <select name="date" value="<?php ?>">
-            <option value="this">This Month</option>
-            <option value="last">Last Month</option>
-        </select>
-        ---  
-        From: <input type="date" name="from">
-        To: <input type="date" name="to">
-        <br />
-        
-        </div>
-        <div class="input-row">
-            <button type="submit" id="submit" name="dates" class="btn-submit">Submit</button>
-        </div>
-    </form>
         <h1><?php echo $month ;?> Month Revenue</h1>
 		<?php include('src/this-month-revenue.php') ?>
 		<h1>Leads <?php echo $month ;?> Month</h1>
