@@ -93,16 +93,33 @@
 	</div>
 	<div class="outer-scontainer container-fluid">
     <?php include('src/form-import.php'); ?>
-    <h1>This Month Revenue</h1>
+    <h2>Select Dates</h2>
+    <form class="form-horizontal" action="" method="post" name="clear-table" id="dates" enctype="multipart/form-data">
+        <div class="input-row">
+        <select name="date" value="<?php ?>">
+            <option value="this">This Month</option>
+            <option value="last">Last Month</option>
+        </select>
+        ---  
+        From: <input type="date" name="from">
+        To: <input type="date" name="to">
+        <br />
+        
+        </div>
+        <div class="input-row">
+            <button type="submit" id="submit" name="dates" class="btn-submit">Submit</button>
+        </div>
+    </form>
+        <h1><?php echo $month ;?> Month Revenue</h1>
 		<?php include('src/this-month-revenue.php') ?>
-		<h1>Leads This Month</h1>
+		<h1>Leads <?php echo $month ;?> Month</h1>
 		<?php include('src/this-month-leads.php') ?>
 		<br><br>
-		<h1>Leads This Month ASAP</h1>
+		<h1>Leads <?php echo $month ;?> Month ASAP</h1>
 		<?php include('src/this-month-leads-by-asap.php') ?>
 		<br><br>
-		<h1>Leads Last Month</h1>
-		<?php include('src/last-month-leads.php') ?>
+		<!-- <h1>Leads Last Month</h1> -->
+		<?php //include('src/last-month-leads.php') ?>
 	</div>
 
 </body>

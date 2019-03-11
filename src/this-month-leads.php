@@ -1,6 +1,4 @@
 <?php
-    $thisMonthFirst = date('Y-m-d',strtotime('first day of this month'));
-    $thisMonthLast = date('Y-m-d',strtotime('last day of this month'));
     echo "<" .$thisMonthFirst . "> to ";
     echo "<" .$thisMonthLast. "> ";    
     $sqlSelect = "SELECT * FROM `leads-tbl` WHERE datecr BETWEEN '$thisMonthFirst' AND '$thisMonthLast' ORDER BY datecr DESC";

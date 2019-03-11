@@ -5,7 +5,9 @@ require_once __DIR__ . '/src/Initialize.php';
 // Set Last Month Date for SQL Select
 $lastMonthFirst = date('Y-m-d',strtotime('first day of last month'));
 $lastMonthLast = date('Y-m-d',strtotime('last day of last month'));
-
+$thisMonthFirst = date('Y-m-d',strtotime('first day of this month'));
+$thisMonthLast = date('Y-m-d',strtotime('last day of this month'));
+$month = "This";
 // If File is Imported from computer
 if (isset($_POST["import"])) {
     $fileName = $_FILES["file"]["tmp_name"];
@@ -31,6 +33,24 @@ if (isset($_POST["import"])) {
                 $message = mysqli_error($conn);
             }
         }
+    }
+}
+if (isset($_POST["dates"])) {
+    $lastMonthFirst = date('Y-m-d',strtotime('first day of last month'));
+    $lastMonthLast = date('Y-m-d',strtotime('last day of last month'));
+    if($_POST['date'] == "this"){
+        $thisMonthFirst = date('Y-m-d',strtotime('first day of this month'));
+        $thisMonthLast = date('Y-m-d',strtotime('last day of this month'));
+        $month = "This";
+    } elseif($_POST['date'] == "last"){
+        $thisMonthFirst = $lastMonthFirst;
+        $thisMonthLast = $lastMonthLast;
+        $month = "Last";
+    } 
+    if($_POST['from']){
+        $thisMonthFirst = $_POST['from'];
+        $thisMonthLast = $_POST['to'];
+        $month = "Selected";
     }
 }
 include('src/body.php');
