@@ -12,7 +12,7 @@
             }
             if($row['was sold'] == '1' ){
               $Total ++;
-              $TotalRev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $CancelRev;
+              $TotalRev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $CancelRev;
             }
             if($row['cancelsale'] == '1' ){
               $Cancelled ++;
@@ -22,23 +22,23 @@
                 if($row['was sold'] == '1' ){
                   $bbbSold++;
                   if($row['Nurture']== ''){
-                    $bbbrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $bbbrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $bbb++;
                   }
                   if($row['Nurture']== 'Text Blast'){
-                    $bbbtrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $bbbtrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $bbbt++;
                   }
                   if($row['Nurture']== 'Email Blast'){
-                    $bbberev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $bbberev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $bbbe++;
                   }
                   if($row['Nurture']== 'Mail Drop'){
-                    $bbbmrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $bbbmrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $bbbm++;
                   }
                   if($row['Nurture']== 'Ringless Voicemail'){
-                    $bbbrrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $bbbrrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $bbbr++;
                   }
                 }
@@ -66,23 +66,23 @@
                 if($row['was sold'] == '1' ){
                     $fbSold++;
                     if($row['Nurture']== ''){
-                      $fbrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                      $fbrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                       $fb++;
                     }
                     if($row['Nurture']== 'Text Blast'){
-                      $fbtrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                      $fbtrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                       $fbt++;
                     }
                     if($row['Nurture']== 'Email Blast'){
-                      $fberev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                      $fberev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                       $fbe++;
                     }
                     if($row['Nurture']== 'Mail Drop'){
-                      $fbmrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                      $fbmrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                       $fbm++;
                     }
                     if($row['Nurture']== 'Ringless Voicemail'){
-                      $fbrrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                      $fbrrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                       $fbr++;
                     }
                 }
@@ -111,23 +111,23 @@
                 if($row['was sold'] == '1' ){
                     $fmSold++;
                     if($row['Nurture']== ''){
-                      $fmrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                      $fmrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                       $fm++;
                     }
                     if($row['Nurture']== 'Text Blast'){
-                      $fmtrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                      $fmtrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                       $fmt++;
                     }
                     if($row['Nurture']== 'Email Blast'){
-                      $fmerev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                      $fmerev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                       $fme++;
                     }
                     if($row['Nurture']== 'Mail Drop'){
-                      $fmmrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                      $fmmrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                       $fmm++;
                     }
                     if($row['Nurture']== 'Ringless Voicemail'){
-                      $fmrrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                      $fmrrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                       $fmr++;
                     }
                 }
@@ -156,23 +156,23 @@
                 if($row['was sold'] == '1' ){
                     $fcSold++;
                     if($row['Nurture']== ''){
-                      $fcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                      $fcrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                       $fc++;
                     }
                     if($row['Nurture']== 'Text Blast'){
-                      $fctrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                      $fctrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                       $fct++;
                     }
                     if($row['Nurture']== 'Email Blast'){
-                      $fceev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                      $fceev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                       $fce++;
                     }
                     if($row['Nurture']== 'Mail Drop'){
-                      $fcmev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                      $fcmev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                       $fcm++;
                     }
                     if($row['Nurture']== 'Ringless Voicemail'){
-                      $fcrrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                      $fcrrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                       $fcr++;
                     }
                 }
@@ -201,24 +201,24 @@
                 if($row['was sold'] == '1' ){
                     $icSold++;
                     if($row['Nurture']== ''){
-                      $icrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                      $icrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                       $ic++;
-                      // $icrev = $row['sold_mt_rev'] + $row['sold_tr_rev'] - ($row['cancelsale'] * ($row['sold_mt_rev'] + $row['sold_tr_rev']));
+                      // $icrev = $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - ($row['cancelsale'] * ($row['sold_mt_rev_net'] + $row['sold_tr_rev_net']));
                     }
                     if($row['Nurture']== 'Text Blast'){
-                      $ictrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                      $ictrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                       $ict++;
                     }
                     if($row['Nurture']== 'Email Blast'){
-                      $icerev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                      $icerev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                       $ice++;
                     }
                     if($row['Nurture']== 'Mail Drop'){
-                      $icmrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                      $icmrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                       $icm++;
                     }
                     if($row['Nurture']== 'Ringless Voicemail'){
-                      $icrrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                      $icrrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                       $icr++;
                     }
                 }
@@ -247,24 +247,24 @@
               if($row['was sold'] == '1' ){
                   $ogSold++;
                   if($row['Nurture']== ''){
-                    $ogrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $ogrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $og++;
-                    // $ogrev = $row['sold_mt_rev'] + $row['sold_tr_rev'] - ($row['cancelsale'] * ($row['sold_mt_rev'] + $row['sold_tr_rev']));
+                    // $ogrev = $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - ($row['cancelsale'] * ($row['sold_mt_rev_net'] + $row['sold_tr_rev_net']));
                   }
                   if($row['Nurture']== 'Text Blast'){
-                    $ogtrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $ogtrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $ogt++;
                   }
                   if($row['Nurture']== 'Email Blast'){
-                    $ogerev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $ogerev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $oge++;
                   }
                   if($row['Nurture']== 'Mail Drop'){
-                    $ogmrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $ogmrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $ogm++;
                   }
                   if($row['Nurture']== 'Ringless Voogemail'){
-                    $ogrrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $ogrrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $ogr++;
                   }
               }
@@ -291,27 +291,27 @@
              if($row['source'] == 'Other'){
               $otTotal++;
               if($row['was sold'] == '1' ){
-                    $otrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $otrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $otSold++;
                   if($row['Nurture']== ''){
-                    $otrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $otrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $ot++;
-                    // $otrev = $row['sold_mt_rev'] + $row['sold_tr_rev'] - ($row['cancelsale'] * ($row['sold_mt_rev'] + $row['sold_tr_rev']));
+                    // $otrev = $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - ($row['cancelsale'] * ($row['sold_mt_rev_net'] + $row['sold_tr_rev_net']));
                   }
                   if($row['Nurture']== 'Text Blast'){
-                    $ottrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $ottrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $ott++;
                   }
                   if($row['Nurture']== 'Email Blast'){
-                    $oterev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $oterev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $ote++;
                   }
                   if($row['Nurture']== 'Mail Drop'){
-                    $otmrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $otmrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $otm++;
                   }
                   if($row['Nurture']== 'Ringless Voicemail'){
-                    $otrrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $otrrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $otr++;
                   }
               }
@@ -340,24 +340,24 @@
               if($row['was sold'] == '1' ){
                   $ppcSold++;
                   if($row['Nurture']== ''){
-                    $ppcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $ppcrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $ppc++;
-                    // $ppcrev = $row['sold_mt_rev'] + $row['sold_tr_rev'] - ($row['cancelsale'] * ($row['sold_mt_rev'] + $row['sold_tr_rev']));
+                    // $ppcrev = $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - ($row['cancelsale'] * ($row['sold_mt_rev_net'] + $row['sold_tr_rev_net']));
                   }
                   if($row['Nurture']== 'Text Blast'){
-                    $ppctrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $ppctrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $ppct++;
                   }
                   if($row['Nurture']== 'Email Blast'){
-                    $ppcerev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $ppcerev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $ppce++;
                   }
                   if($row['Nurture']== 'Mail Drop'){
-                    $ppcmrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $ppcmrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $ppcm++;
                   }
                   if($row['Nurture']== 'Ringless Voicemail'){
-                    $ppcrrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $ppcrrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $ppcr++;
                   }
               }
@@ -386,24 +386,24 @@
               if($row['was sold'] == '1' ){
                   $raSold++;
                   if($row['Nurture']== ''){
-                    $rarev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $rarev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $ra++;
-                    // $rarev = $row['sold_mt_rev'] + $row['sold_tr_rev'] - ($row['cancelsale'] * ($row['sold_mt_rev'] + $row['sold_tr_rev']));
+                    // $rarev = $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - ($row['cancelsale'] * ($row['sold_mt_rev_net'] + $row['sold_tr_rev_net']));
                   }
                   if($row['Nurture']== 'Text Blast'){
-                    $ratrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $ratrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $rat++;
                   }
                   if($row['Nurture']== 'Email Blast'){
-                    $raerev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $raerev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $rae++;
                   }
                   if($row['Nurture']== 'Mail Drop'){
-                    $ramrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $ramrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $ram++;
                   }
                   if($row['Nurture']== 'Ringless Voicemail'){
-                    $rarrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $rarrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $rar++;
                   }
               }
@@ -432,24 +432,24 @@
               if($row['was sold'] == '1' ){
                   $refSold++;
                   if($row['Nurture']== ''){
-                    $refrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $refrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $ref++;
-                    // $refrev = $row['sold_mt_rev'] + $row['sold_tr_rev'] - ($row['cancelsale'] * ($row['sold_mt_rev'] + $row['sold_tr_rev']));
+                    // $refrev = $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - ($row['cancelsale'] * ($row['sold_mt_rev_net'] + $row['sold_tr_rev_net']));
                   }
                   if($row['Nurture']== 'Text Blast'){
-                    $reftrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $reftrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $reft++;
                   }
                   if($row['Nurture']== 'Email Blast'){
-                    $referev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $referev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $refe++;
                   }
                   if($row['Nurture']== 'Mail Drop'){
-                    $refmrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $refmrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $refm++;
                   }
                   if($row['Nurture']== 'Ringless Voicemail'){
-                    $refrrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $refrrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $refr++;
                   }
               }
@@ -478,24 +478,24 @@
               if($row['was sold'] == '1' ){
                   $tvSold++;
                   if($row['Nurture']== ''){
-                    $tvrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $tvrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $tv++;
-                    // $tvrev = $row['sold_mt_rev'] + $row['sold_tr_rev'] - ($row['cancelsale'] * ($row['sold_mt_rev'] + $row['sold_tr_rev']));
+                    // $tvrev = $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - ($row['cancelsale'] * ($row['sold_mt_rev_net'] + $row['sold_tr_rev_net']));
                   }
                   if($row['Nurture']== 'Text Blast'){
-                    $tvtrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $tvtrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $tvt++;
                   }
                   if($row['Nurture']== 'Email Blast'){
-                    $tverev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $tverev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $tve++;
                   }
                   if($row['Nurture']== 'Mail Drop'){
-                    $tvmrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $tvmrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $tvm++;
                   }
                   if($row['Nurture']== 'Ringless Voicemail'){
-                    $tvrrev += $row['sold_mt_rev'] + $row['sold_tr_rev'] - $row['canceled_rev'];
+                    $tvrrev += $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'] - $row['canceled_rev'];
                     $tvr++;
                   }
               }
