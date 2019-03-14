@@ -33,6 +33,7 @@
     <form class="form-horizontal" action="" method="post" name="clear-table" id="dates" enctype="multipart/form-data">
         <div class="input-row">
         <select name="date" value="<?php ?>">
+            <option value=""></option>
             <option value="this">This Month</option>
             <option value="last">Last Month</option>
         </select>
