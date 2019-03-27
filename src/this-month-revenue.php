@@ -45,18 +45,23 @@
                 if($row['cancelsale'] == '1'){
                     $bbbCancelled++;
                     if($row['Nurture']== ''){
+                      $bbbcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                       $bbbc++;
                     }
                     if($row['Nurture']== 'Text Blast'){
+                      $bbbtcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                       $bbbtc++;
                     }
                     if($row['Nurture']== 'Email Blast'){
+                      $bbbecrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                       $bbbec++;
                     }
                     if($row['Nurture']== 'Mail Drop'){
+                      $bbbmcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                       $bbbmc++;
                     }
                     if($row['Nurture']== 'Ringless Voicemail'){
+                      $bbbrcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                       $bbbrc++;
                     }
                 }
@@ -89,18 +94,23 @@
                 if($row['cancelsale'] == '1'){
                     $fbCancelled++;
                     if($row['Nurture']== ''){
+                      $fbcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                       $fbc++;
                     }
                     if($row['Nurture']== 'Text Blast'){
+                      $fbtcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                       $fbtc++;
                     }
                     if($row['Nurture']== 'Email Blast'){
+                      $fbecrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                       $fbec++;
                     }
                     if($row['Nurture']== 'Mail Drop'){
+                      $fbmcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                       $fbmc++;
                     }
                     if($row['Nurture']== 'Ringless Voicemail'){
+                      $fbrcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                       $fbrc++;
                     }
                 }
@@ -134,18 +144,23 @@
                 if($row['cancelsale'] == '1'){
                     $fmCancelled++;
                     if($row['Nurture']== ''){
+                      $fmcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                       $fmc++;
                     }
                     if($row['Nurture']== 'Text Blast'){
+                      $fmtcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                       $fmtc++;
                     }
                     if($row['Nurture']== 'Email Blast'){
+                      $fmecrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                       $fmec++;
                     }
                     if($row['Nurture']== 'Mail Drop'){
+                      $fmmcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                       $fmmc++;
                     }
                     if($row['Nurture']== 'Ringless Voicemail'){
+                      $fmrcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                       $fmrc++;
                     }
                 }
@@ -179,18 +194,23 @@
                 if($row['cancelsale'] == '1'){
                     $fcCancelled++;
                     if($row['Nurture']== ''){
+                      $fccrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                       $fcc++;
                     }
                     if($row['Nurture']== 'Text Blast'){
+                      $fctcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                       $fctc++;
                     }
                     if($row['Nurture']== 'Email Blast'){
+                      $fcecrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                       $fcec++;
                     }
                     if($row['Nurture']== 'Mail Drop'){
+                      $fcmcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                       $fcmc++;
                     }
                     if($row['Nurture']== 'Ringless Voicemail'){
+                      $fcrcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                       $fcrc++;
                     }
                 }
@@ -225,18 +245,23 @@
                 if($row['cancelsale'] == '1'){
                     $icCancelled++;
                     if($row['Nurture']== ''){
+                      $iccrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                       $icc++;
                     }
                     if($row['Nurture']== 'Text Blast'){
+                      $ictcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                       $ictc++;
                     }
                     if($row['Nurture']== 'Email Blast'){
+                      $icecrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                       $icec++;
                     }
                     if($row['Nurture']== 'Mail Drop'){
+                      $icmcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                       $icmc++;
                     }
                     if($row['Nurture']== 'Ringless Voicemail'){
+                      $icrcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                       $icrc++;
                     }
                 }
@@ -271,18 +296,23 @@
               if($row['cancelsale'] == '1'){
                   $ogCancelled++;
                   if($row['Nurture']== ''){
+                    $ogcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $ogc++;
                   }
                   if($row['Nurture']== 'Text Blast'){
+                    $ogtcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $ogtc++;
                   }
                   if($row['Nurture']== 'Email Blast'){
+                    $ogecrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $ogec++;
                   }
                   if($row['Nurture']== 'Mail Drop'){
+                    $ogmcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $ogmc++;
                   }
                   if($row['Nurture']== 'Ringless Voicemail'){
+                    $ogrcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $ogrc++;
                   }
               }
@@ -318,18 +348,23 @@
               if($row['cancelsale'] == '1'){
                   $otCancelled++;
                   if($row['Nurture']== ''){
+                    $otcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $otc++;
                   }
                   if($row['Nurture']== 'Text Blast'){
+                    $ottcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $ottc++;
                   }
                   if($row['Nurture']== 'Email Blast'){
+                    $otecrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $otec++;
                   }
                   if($row['Nurture']== 'Mail Drop'){
+                    $otmcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $otmc++;
                   }
                   if($row['Nurture']== 'Ringless Voicemail'){
+                    $otrcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $otrc++;
                   }
               }
@@ -364,18 +399,23 @@
               if($row['cancelsale'] == '1'){
                   $ppcCancelled++;
                   if($row['Nurture']== ''){
+                    $ppccrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $ppcc++;
                   }
                   if($row['Nurture']== 'Text Blast'){
+                    $ppctcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $ppctc++;
                   }
                   if($row['Nurture']== 'Email Blast'){
+                    $ppcecrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $ppcec++;
                   }
                   if($row['Nurture']== 'Mail Drop'){
+                    $ppcmcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $ppcmc++;
                   }
                   if($row['Nurture']== 'Ringless Voicemail'){
+                    $ppcrcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $ppcrc++;
                   }
               }
@@ -410,18 +450,23 @@
               if($row['cancelsale'] == '1'){
                   $raCancelled++;
                   if($row['Nurture']== ''){
+                    $racrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $rac++;
                   }
                   if($row['Nurture']== 'Text Blast'){
+                    $ratcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $ratc++;
                   }
                   if($row['Nurture']== 'Email Blast'){
+                    $raecrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $raec++;
                   }
                   if($row['Nurture']== 'Mail Drop'){
+                    $ramcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $ramc++;
                   }
                   if($row['Nurture']== 'Ringless Voicemail'){
+                    $rarcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $rarc++;
                   }
               }
@@ -456,18 +501,23 @@
               if($row['cancelsale'] == '1'){
                   $refCancelled++;
                   if($row['Nurture']== ''){
+                    $refcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $refc++;
                   }
                   if($row['Nurture']== 'Text Blast'){
+                    $reftcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $reftc++;
                   }
                   if($row['Nurture']== 'Email Blast'){
+                    $refecrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $refec++;
                   }
                   if($row['Nurture']== 'Mail Drop'){
+                    $refmcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $refmc++;
                   }
                   if($row['Nurture']== 'Ringless Voicemail'){
+                    $refrcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $refrc++;
                   }
               }
@@ -502,18 +552,23 @@
               if($row['cancelsale'] == '1'){
                   $tvCancelled++;
                   if($row['Nurture']== ''){
+                    $tvcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $tvc++;
                   }
                   if($row['Nurture']== 'Text Blast'){
+                    $tvtcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $tvtc++;
                   }
                   if($row['Nurture']== 'Email Blast'){
+                    $tvecrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $tvec++;
                   }
                   if($row['Nurture']== 'Mail Drop'){
+                    $tvmcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $tvmc++;
                   }
                   if($row['Nurture']== 'Ringless Voicemail'){
+                    $tvrcrev += $row['sold_mt_rev'] + $row['sold_tr_rev'];
                     $tvrc++;
                   }
               }
@@ -531,7 +586,8 @@
       <th>NURTURE</th>
       <th>SOLD</th>
       <th>CANCELLED</th>
-      <th>REVENUE</th>
+      <th>TOTAL CANCELS</th>
+      <th>GROWTH</th>
     </tr>
   </thead>
   <tbody>
@@ -543,6 +599,9 @@
       </td>
       <td>
         <?php echo $bbbc ?>
+      </td>
+      <td>
+        $ <?php echo number_format($bbbcrev) ?>
       </td>
       <td>
         $ <?php echo number_format($bbbrev) ?>
@@ -560,6 +619,9 @@
         <?php echo $bbbtc ?>
       </td>
       <td>
+        $ <?php echo number_format($bbbtcrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($bbbtrev) ?>
       </td>
     </tr>
@@ -573,6 +635,9 @@
       </td>
       <td>
         <?php echo $bbbec ?>
+      </td>
+      <td>
+        $ <?php echo number_format($bbbecrev) ?>
       </td>
       <td>
         $ <?php echo number_format($bbberev) ?>
@@ -590,6 +655,9 @@
         <?php echo $bbbmc ?>
       </td>
       <td>
+        $ <?php echo number_format($bbbmcrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($bbbmrev) ?>
       </td>
     </tr>
@@ -603,6 +671,9 @@
       </td>
       <td>
         <?php echo $bbbrc ?>
+      </td>
+      <td>
+        $ <?php echo number_format($bbbrcrev) ?>
       </td>
       <td>
         $ <?php echo number_format($bbbrrev) ?>
@@ -619,6 +690,9 @@
         <?php echo $fbc ?>
       </td>
       <td>
+        $ <?php echo number_format($fbcrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($fbrev) ?>
       </td>
     </tr>
@@ -632,6 +706,9 @@
       </td>
       <td>
         <?php echo $fbtc ?>
+      </td>
+      <td>
+        $ <?php echo number_format($fbtcrev) ?>
       </td>
       <td>
         $ <?php echo number_format($fbtrev) ?>
@@ -651,6 +728,9 @@
       <td>
         $ <?php echo number_format($fberev) ?>
       </td>
+      <td>
+        $ <?php echo number_format($fbecrev) ?>
+      </td>
     </tr>
     <tr style="<?php if($fbm == 0) {echo " display:none";}?>">
       <td></td>
@@ -662,6 +742,9 @@
       </td>
       <td>
         <?php echo $fbmc ?>
+      </td>
+      <td>
+        $ <?php echo number_format($fbmcrev) ?>
       </td>
       <td>
         $ <?php echo number_format($fbmrev) ?>
@@ -679,6 +762,9 @@
         <?php echo $fbrc ?>
       </td>
       <td>
+        $ <?php echo number_format($fbrcrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($fbrrev) ?>
       </td>
     </tr>
@@ -691,6 +777,9 @@
       </td>
       <td>
         <?php echo $fmc ?>
+      </td>
+      <td>
+        $ <?php echo number_format($fmcrev) ?>
       </td>
       <td>
         $ <?php echo number_format($fmrev) ?>
@@ -708,6 +797,9 @@
         <?php echo $fmtc ?>
       </td>
       <td>
+        $ <?php echo number_format($fmtcrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($fmtrev) ?>
       </td>
     </tr>
@@ -721,6 +813,9 @@
       </td>
       <td>
         <?php echo $fmec ?>
+      </td>
+      <td>
+        $ <?php echo number_format($fmecrev) ?>
       </td>
       <td>
         $ <?php echo number_format($fmerev) ?>
@@ -738,6 +833,9 @@
         <?php echo $fmmc ?>
       </td>
       <td>
+        $ <?php echo number_format($fmmcrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($fmmrev) ?>
       </td>
     </tr>
@@ -751,6 +849,9 @@
       </td>
       <td>
         <?php echo $fmrc ?>
+      </td>
+      <td>
+        $ <?php echo number_format($fmrcrev) ?>
       </td>
       <td>
         $ <?php echo number_format($fmrrev) ?>
@@ -768,6 +869,9 @@
         <?php echo $fcc ?>
       </td>
       <td>
+        $ <?php echo number_format($fccrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($fcrev) ?>
       </td>
     </tr>
@@ -781,6 +885,9 @@
       </td>
       <td>
         <?php echo $fctc ?>
+      </td>
+      <td>
+        $ <?php echo number_format($fctcrev) ?>
       </td>
       <td>
         $ <?php echo number_format($fctrev) ?>
@@ -798,6 +905,9 @@
         <?php echo $fcec ?>
       </td>
       <td>
+        $ <?php echo number_format($fcecrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($fcerev) ?>
       </td>
     </tr>
@@ -811,6 +921,9 @@
       </td>
       <td>
         <?php echo $fcmc ?>
+      </td>
+      <td>
+        $ <?php echo number_format($fcmcrev) ?>
       </td>
       <td>
         $ <?php echo number_format($fcmrev) ?>
@@ -828,6 +941,9 @@
         <?php echo $fcrc ?>
       </td>
       <td>
+        $ <?php echo number_format($fcrmcrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($fcrmrev) ?>
       </td>
     </tr>
@@ -840,6 +956,9 @@
       </td>
       <td>
         <?php echo $icc ?>
+      </td>
+      <td>
+        $ <?php echo number_format($iccrev) ?>
       </td>
       <td>
         $ <?php echo number_format($icrev) ?>
@@ -857,6 +976,9 @@
         <?php echo $ictc ?>
       </td>
       <td>
+        $ <?php echo number_format($ictcrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($ictrev) ?>
       </td>
     </tr>
@@ -870,6 +992,9 @@
       </td>
       <td>
         <?php echo $icec ?>
+      </td>
+      <td>
+        $ <?php echo number_format($icecrev) ?>
       </td>
       <td>
         $ <?php echo number_format($icerev) ?>
@@ -887,6 +1012,9 @@
         <?php echo $icmc ?>
       </td>
       <td>
+        $ <?php echo number_format($icmcrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($icmrev) ?>
       </td>
     </tr>
@@ -902,6 +1030,9 @@
         <?php echo $icrc ?>
       </td>
       <td>
+        $ <?php echo number_format($icrcrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($icrrev) ?>
       </td>
     </tr>
@@ -914,6 +1045,9 @@
       </td>
       <td>
         <?php echo $ogc ?>
+      </td>
+      <td>
+        $ <?php echo number_format($ogcrev) ?>
       </td>
       <td>
         $ <?php echo number_format($ogrev) ?>
@@ -931,6 +1065,9 @@
         <?php echo $ogtc ?>
       </td>
       <td>
+        $ <?php echo number_format($ogtcrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($ogtrev) ?>
       </td>
     </tr>
@@ -944,6 +1081,9 @@
       </td>
       <td>
         <?php echo $ogec ?>
+      </td>
+      <td>
+        $ <?php echo number_format($ogecrev) ?>
       </td>
       <td>
         $ <?php echo number_format($ogerev) ?>
@@ -961,6 +1101,9 @@
         <?php echo $ogmc ?>
       </td>
       <td>
+        $ <?php echo number_format($ogmcrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($ogmrev) ?>
       </td>
     </tr>
@@ -976,6 +1119,9 @@
         <?php echo $ogrc ?>
       </td>
       <td>
+        $ <?php echo number_format($ogrcrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($ogrrev) ?>
       </td>
     </tr>
@@ -988,6 +1134,9 @@
       </td>
       <td>
         <?php echo $otc ?>
+      </td>
+      <td>
+        $ <?php echo number_format($otcrev) ?>
       </td>
       <td>
         $ <?php echo number_format($otrev) ?>
@@ -1005,6 +1154,9 @@
         <?php echo $ottc ?>
       </td>
       <td>
+        $ <?php echo number_format($ottcrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($ottrev) ?>
       </td>
     </tr>
@@ -1018,6 +1170,9 @@
       </td>
       <td>
         <?php echo $otec ?>
+      </td>
+      <td>
+        $ <?php echo number_format($otecrev) ?>
       </td>
       <td>
         $ <?php echo number_format($oterev) ?>
@@ -1035,6 +1190,9 @@
         <?php echo $otmc ?>
       </td>
       <td>
+        $ <?php echo number_format($otmcrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($otmrev) ?>
       </td>
     </tr>
@@ -1050,6 +1208,9 @@
         <?php echo $otrc ?>
       </td>
       <td>
+        $ <?php echo number_format($otrcrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($otrrev) ?>
       </td>
     </tr>
@@ -1062,6 +1223,9 @@
       </td>
       <td>
         <?php echo $ppcc ?>
+      </td>
+      <td>
+        $ <?php echo number_format($ppccrev) ?>
       </td>
       <td>
         $ <?php echo number_format($ppcrev) ?>
@@ -1079,6 +1243,9 @@
         <?php echo $ppctc ?>
       </td>
       <td>
+        $ <?php echo number_format($ppctcrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($ppctrev) ?>
       </td>
     </tr>
@@ -1092,6 +1259,9 @@
       </td>
       <td>
         <?php echo $ppcec ?>
+      </td>
+      <td>
+        $ <?php echo number_format($ppcecrev) ?>
       </td>
       <td>
         $ <?php echo number_format($ppcerev) ?>
@@ -1109,6 +1279,9 @@
         <?php echo $ppcmc ?>
       </td>
       <td>
+        $ <?php echo number_format($ppcmcrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($ppcmrev) ?>
       </td>
     </tr>
@@ -1124,6 +1297,9 @@
         <?php echo $ppcrc ?>
       </td>
       <td>
+        $ <?php echo number_format($ppcrcrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($ppcrrev) ?>
       </td>
     </tr>
@@ -1136,6 +1312,9 @@
       </td>
       <td>
         <?php echo $rac ?>
+      </td>
+      <td>
+        $ <?php echo number_format($racrev) ?>
       </td>
       <td>
         $ <?php echo number_format($rarev) ?>
@@ -1153,6 +1332,9 @@
         <?php echo $ratc ?>
       </td>
       <td>
+        $ <?php echo number_format($ratcrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($ratrev) ?>
       </td>
     </tr>
@@ -1168,6 +1350,9 @@
         <?php echo $raec ?>
       </td>
       <td>
+        $ <?php echo number_format($raecrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($raerev) ?>
       </td>
     </tr>
@@ -1181,6 +1366,9 @@
       </td>
       <td>
         <?php echo $ramc ?>
+      </td>
+      <td>
+        $ <?php echo number_format($ramcrev) ?>
       </td>
       <td>
         $ <?php echo number_format($ramrev) ?>
@@ -1212,6 +1400,9 @@
         <?php echo $refc ?>
       </td>
       <td>
+        $ <?php echo number_format($refcrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($refrev) ?>
       </td>
     </tr>
@@ -1225,6 +1416,9 @@
       </td>
       <td>
         <?php echo $reftc ?>
+      </td>
+      <td>
+        $ <?php echo number_format($refrcrev) ?>
       </td>
       <td>
         $ <?php echo number_format($refrrev) ?>
@@ -1242,6 +1436,9 @@
         <?php echo $refec ?>
       </td>
       <td>
+        $ <?php echo number_format($refecrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($referev) ?>
       </td>
     </tr>
@@ -1255,6 +1452,9 @@
       </td>
       <td>
         <?php echo $refmc ?>
+      </td>
+      <td>
+        $ <?php echo number_format($refmcrev) ?>
       </td>
       <td>
         $ <?php echo number_format($refmrev) ?>
@@ -1274,6 +1474,9 @@
       <td>
         $ <?php echo number_format($refrrev) ?>
       </td>
+      <td>
+        $ <?php echo number_format($refrcrev) ?>
+      </td>
     </tr>
     <!-- ************************ -->
     <tr>
@@ -1284,6 +1487,9 @@
       </td>
       <td>
         <?php echo $tvc ?>
+      </td>
+      <td>
+        $ <?php echo number_format($tvcrev) ?>
       </td>
       <td>
         $ <?php echo number_format($tvrev) ?>
@@ -1301,6 +1507,9 @@
         <?php echo $tvtc ?>
       </td>
       <td>
+        $ <?php echo number_format($tvtcrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($tvtrev) ?>
       </td>
     </tr>
@@ -1314,6 +1523,9 @@
       </td>
       <td>
         <?php echo $tvec ?>
+      </td>
+      <td>
+        $ <?php echo number_format($tvecrev) ?>
       </td>
       <td>
         $ <?php echo number_format($tverev) ?>
@@ -1331,6 +1543,9 @@
         <?php echo $tvmc ?>
       </td>
       <td>
+        $ <?php echo number_format($tvmcrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($tvmrev) ?>
       </td>
     </tr>
@@ -1346,6 +1561,9 @@
         <?php echo $tvrc ?>
       </td>
       <td>
+        $ <?php echo number_format($tvrcrev) ?>
+      </td>
+      <td>
         $ <?php echo number_format($tvrrev) ?>
       </td>
     </tr>
@@ -1358,6 +1576,9 @@
       </td>
       <td>
         <?php echo $Cancelled ?>
+      </td>
+      <td>
+        $ <?php echo number_format($cancelTotal) ?>
       </td>
       <td>
         $ <?php echo number_format($TotalRev - $cancelTotal) ?>
