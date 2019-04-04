@@ -103,7 +103,7 @@
 		<?php include('src/this-month-leads-by-asap.php') ?>
 		<br><br>
 		<!-- <h1>Leads Last Month</h1> -->
-		<?php //include('src/last-month-leads.php') ?>
+		<?php $result->close(); ?>
 	</div>
 
 </body>

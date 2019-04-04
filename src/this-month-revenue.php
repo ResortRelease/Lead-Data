@@ -726,10 +726,10 @@
         <?php echo $fbec ?>
       </td>
       <td>
-        $ <?php echo number_format($fberev) ?>
+        $ <?php echo number_format($fbecrev) ?>
       </td>
       <td>
-        $ <?php echo number_format($fbecrev) ?>
+        $ <?php echo number_format($fberev) ?>
       </td>
     </tr>
     <tr style="<?php if($fbm == 0) {echo " display:none";}?>">
