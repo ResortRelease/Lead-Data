@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<style>
 		body {
         font-family: Arial;
@@ -91,7 +90,7 @@
 		<?php if(!empty($message)) { echo $message; } ?>
 	</div>
 	<div class="outer-scontainer container-fluid">
-    <?php include('src/form-import.php'); ?>
+        <?php include('src/form-import.php'); ?>
         <h1><?php echo $month ;?> Month By Facebook Source</h1>
 		<?php include('src/this-month-leads-utm.php') ?>
         <h1><?php echo $month ;?> Month Revenue</h1>
@@ -101,11 +100,21 @@
 		<br><br>
 		<h1>Leads <?php echo $month ;?> Month ASAP</h1>
 		<?php include('src/this-month-leads-by-asap.php') ?>
+        <h1>Last Month Vs This Month - Bar Chart</h1>
+        <br><br>
+        <div class="chart-container">
+            <canvas id="mycanvas"></canvas>
+        </div>
 		<br><br>
 		<!-- <h1>Leads Last Month</h1> -->
 		<?php $result->close(); ?>
 	</div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js" type="text/javascript">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/line-chart/2.0.28/LineChart.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 
+    <script src="/src/linegraph.js"></script>
 </body>
 <!-- Test if imported file is in CSV format -->
 <script type="text/javascript">
