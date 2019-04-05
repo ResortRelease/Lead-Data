@@ -1,7 +1,7 @@
 var $ = jQuery.noConflict();
 $(document).ready(function(){
   $.ajax({
-    url: "http://lead-data/src/leads-vs-sold.php",
+    url: "/src/leads-vs-sold.php",
     type: "GET",
     success: function(data){
       console.log(data);
