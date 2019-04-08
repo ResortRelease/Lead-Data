@@ -23,7 +23,7 @@
     if (mysqli_num_rows($result) > 0) {
       while ($row = mysqli_fetch_array($result)) {
         array_push($campaigns, $row['utm_campaign']);
-        if($row['was sold'] == '1'){
+        if($row['was sold'] == '1' && $row['cancelsale'] == '0'){
           $revenue = $row['sold_mt_rev'] + $row['sold_tr_rev'];
           array_push($sold, $row['utm_campaign']);
           $sales[$row['utm_campaign']] += $revenue;
