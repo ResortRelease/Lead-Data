@@ -53,6 +53,20 @@ $(document).ready(function(){
               ticks: {beginAtZero: true }
             }],
             yAxes: [{ stacked: true }]
+          },
+          showTooltips: false,
+          onAnimationComplete: function () {
+            var ctx = this.chart.ctx;
+            ctx.font = this.scale.font;
+            ctx.fillStyle = this.scale.textColor
+            ctx.textAlign = "center";
+            ctx.textBaseline = "bottom";
+
+            this.datasets.forEach(function (dataset) {
+                dataset.bars.forEach(function (bar) {
+                    ctx.fillText(bar.value, bar.x, bar.y - 5);
+                });
+            })
           }
         }
       })

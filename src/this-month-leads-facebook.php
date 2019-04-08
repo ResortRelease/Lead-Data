@@ -2,7 +2,7 @@
     echo "<" .$thisMonthFirst . "> to ";
     echo "<" .$thisMonthLast. "> ";    
     $sqlSelect = "SELECT * FROM `leads-tbl` WHERE dateASAP BETWEEN '$thisMonthFirst' AND '$thisMonthLast' 
-    AND utm_source LIKE '%facebook%'
+    AND source LIKE '%facebook%'
     ORDER BY dateASAP DESC";
     
     $result = mysqli_query($conn, $sqlSelect);
