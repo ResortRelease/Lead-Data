@@ -23,15 +23,15 @@
     $sold = array();
     if (mysqli_num_rows($result) > 0) {
       while ($row = mysqli_fetch_array($result)) {
-        if($row['utm_campaign'] != ''){
-          array_push($campaigns, $row['utm_campaign']);
-          if($row['was sold'] == '1'){
-            $revenue = $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'];
-            array_push($sold, $row['utm_campaign']);
-            $sales[$row['utm_campaign']] += $revenue;
-            $tsale += $revenue;
-          }
+        array_push($campaigns, $row['utm_campaign']);
+        if($row['was sold'] == '1'){
+          $revenue = $row['sold_mt_rev_net'] + $row['sold_tr_rev_net'];
+          array_push($sold, $row['utm_campaign']);
+          $sales[$row['utm_campaign']] += $revenue;
+          $tsale += $revenue;
         }
+        // if($row['utm_campaign'] != ''){
+        // }
       }
       $camp = array_count_values($campaigns);
       $sold = array_count_values($sold);
