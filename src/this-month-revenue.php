@@ -1568,7 +1568,7 @@
       </td>
     </tr>
     <!-- ************************ -->
-    <tr style="background:#e7f7f7;">
+    <tr style="background:#d2efd2;">
       <td>Total</td>
       <td></td>
       <td>

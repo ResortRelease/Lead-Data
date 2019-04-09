@@ -27,8 +27,8 @@
           $revenue = $row['sold_mt_rev'] + $row['sold_tr_rev'];
           array_push($sold, $row['utm_campaign']);
           $sales[$row['utm_campaign']] += $revenue;
-          $tsale += $revenue;
         }
+        $tleads += 1;
         // if($row['utm_campaign'] != ''){
         // }
       }
@@ -43,6 +43,7 @@
           <td>$val</td>";
           foreach($sold as $k => $v) {
             if($key == $k){
+              $tsold += $v;
               echo "<td>$v</td>";
             } 
             if($v < 1) { 
@@ -51,12 +52,13 @@
             }
           }
           if($sold[$key]){
+            $tsale += $sales[$key];
             echo "<td>$" . number_format($sales[$key]) . "</td>";
           }
           echo "</tr>";
         }
       }
-      echo "</tbody>
+      echo "<tr style='background:#d2efd2'><td><b>Total Revenue</b></td><td></td><td>$tsold</td><td>$".number_format($tsale)."</td></tr></tbody>
       </table><br>";
     }
 ?>

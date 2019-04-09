@@ -20,6 +20,8 @@
     $campaigns = array();
     $sales = array();
     $sold = array();
+    $tsold = 0;
+    $tsale = 0;
     if (mysqli_num_rows($result) > 0) {
       while ($row = mysqli_fetch_array($result)) {
         array_push($campaigns, $row['utm_campaign']);
@@ -27,8 +29,8 @@
           $revenue = $row['sold_mt_rev'] + $row['sold_tr_rev'];
           array_push($sold, $row['utm_campaign']);
           $sales[$row['utm_campaign']] += $revenue;
-          $tsale += $revenue;
         }
+        $tleads += 1;
         // if($row['utm_campaign'] != ''){
         // }
       }
@@ -43,6 +45,7 @@
           <td>$val</td>";
           foreach($sold as $k => $v) {
             if($key == $k){
+              $tsold += $v;
               echo "<td>$v</td>";
             } 
             if($v < 1) { 
@@ -51,12 +54,13 @@
             }
           }
           if($sold[$key]){
+            $tsale += $sales[$key];
             echo "<td>$" . number_format($sales[$key]) . "</td>";
           }
           echo "</tr>";
         }
       }
-      echo "</tbody>
+      echo "<tr style='background:#d2efd2'><td><b>Total Revenue</b></td><td></td><td>$tsold</td><td>$".number_format($tsale)."</td></tr></tbody>
       </table><br>";
     }
 ?>
