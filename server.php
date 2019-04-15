@@ -16,6 +16,7 @@ if (isset($_POST['reg_user'])) {
   $email = mysqli_real_escape_string($db, $_POST['email']);
   $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
   $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
+  $passcode = mysqli_real_escape_string($db, $_POST['passcode']);
 
   // form validation: ensure that the form is correctly filled ...
   // by adding (array_push()) corresponding error unto $errors array
@@ -25,6 +26,7 @@ if (isset($_POST['reg_user'])) {
   if ($password_1 != $password_2) {
 	array_push($errors, "The two passwords do not match");
   }
+  if ($passcode != '60r1lL4s019D4t4') { array_push($errors, "Passcode is incorrect"); }
 
   // first check the database to make sure 
   // a user does not already exist with the same username and/or email

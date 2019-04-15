@@ -41,6 +41,10 @@
         <label>Confirm password</label>
         <input type="password" name="password_2">
       </div>
+      <div class="input-group">
+        <label>RR Passcode</label>
+        <input type="password" name="passcode">
+      </div>
       <div class="input-group" style="text-align:center;">
         <button type="submit" class="go" name="reg_user"  style="margin:0 auto;width:230px;cursor:pointer;font-size:14px;">Register</button>
       </div>
