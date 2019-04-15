@@ -10,7 +10,6 @@ html,body {
 body {
   background-color: var(--main-bg)!important;
   height:100%!important;
-  padding-bottom:60px;
 }
 .main {
   min-height: 100vh;
@@ -50,13 +49,13 @@ body {
   color: var(--main-bg);
 }
 .mt20 {
-  margin-top:20px;
+  margin-top:20px!important;
 }
 .mt30 {
-  margin-top:30px;
+  margin-top:30px!important;
 }
 .mt40 {
-  margin-top:40px;
+  margin-top:40px!important;
 }
 .main-d-menu {
   border-radius: 8px;
@@ -125,6 +124,9 @@ a {
 }
 .vertical-center{
   margin-top:15vh;
+  position: relative;
+  padding-bottom:60px;
+
 }
 .progress {
   height: 30px!important;
@@ -247,4 +249,85 @@ a {
 }
 .elform::hover {
   cursor:pointer;
+} 
+/* DATE INPUT FORM */
+form {
+  margin: 0 auto;
+}   
+input[type='date']{
+  background: var(--main-bg);
+  border: 1px solid var(--secondary-bg);
+  color:var(--secondary-bg);
+  height: 45px;
+}
+::-webkit-datetime-edit { padding: 1em; }
+::-webkit-inner-spin-button { display: none; }
+::-webkit-calendar-picker-indicator { background: var(--secondary-bg); color:var(--main-bg);}
+.go{
+  background: var(--main-bg);
+  border: 1px solid var(--secondary-bg);
+  color:var(--secondary-bg);
+  height: 45px;
+}
+.go:hover{
+  background: var(--secondary-bg);
+  border: 1px solid var(--main-bg);
+  color:var(--main-bg);
+}
+.date-form {
+  position: absolute;
+  right: 0;
+  right: 15px;
+  top: -10px;
+}
+
+/* LOG IN */
+.logout{
+  color: #711414;
+  position: fixed;
+  z-index: 999;
+  right: 20px;
+  bottom: 20px;
+  background: #F44336;
+  padding: 1px 12px;
+  border-radius: 10px;
+  opacity: .5;
+}
+.logout:hover {
+  opacity: 1;
+}
+.user-form {
+  margin:0 auto;
+  max-width: 400px;
+}
+.user-form * {
+  font-family: sans-serif;
+}
+.user-form label {
+  color: white;
+}
+.user-form input{
+  height: 45px;
+  width: 100%;
+  background: #828282;
+  color:#333;
+  border: none;
+  margin-bottom: 15px;
+  padding: 0 10px;
+  font-size: 14px;
+}
+.user-form input:placeholder {
+  color:#333;
+}
+.user-form input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #333;
+  opacity: 1; /* Firefox */
+}
+
+.user-form input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #333;
+}
+
+.user-form input::-ms-input-placeholder { /* Microsoft Edge */
+  color: #333;
 }

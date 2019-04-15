@@ -13,7 +13,7 @@
       <?php endif ?>
     </div>
     <div class="row text-center menu-item">
-      <div class="tab-title" style="width:70px;height:auto;margin:12px auto;">
+      <div class="tab-title" style="width:70px;height:auto;margin:12px auto;margin-left:49px!important">
         <a href="/campaigns.php"><img src="/assets/icons/campaigns.svg" alt="" class="img-fluid"></a>
       </div>
       <div class="title" style="display:none;">Campaign</div>

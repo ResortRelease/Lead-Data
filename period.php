@@ -13,16 +13,18 @@
     </div>
     <div class="col-md-10 mt20">
       <div class="vertical-center container">
+        <div class="row mt20" style="text-align:center">
+          <?php include('src/date-form.php') ?>
+        </div>
         <div class="row mt20">
           <div class="primary select elForm">
             <form action="" method="post" name="period" enctype="multipart/form-data">
-
               <h3>This Month</h3>
               <?php 
-              $thisMonthFirst = date('Y-m-d',strtotime('first day of this month'));
-              $thisMonthLast = date('Y-m-d',strtotime('last day of this month'));
-              echo $thisMonthFirst . " - " . $thisMonthLast;
-            ?>
+                $thisMonthFirst = date('Y-m-d',strtotime('first day of this month'));
+                $thisMonthLast = date('Y-m-d',strtotime('last day of this month'));
+                echo $thisMonthFirst . " - " . $thisMonthLast;
+              ?>
               <input type="date" name="from" value="<?php echo $thisMonthFirst ?>" style="display:none;">
               <input type="date" name="to" value="<?php echo $thisMonthLast ?>" style="display:none;">
               <input type="hidden" name="period" value="" />

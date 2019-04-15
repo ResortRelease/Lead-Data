@@ -13,6 +13,9 @@
     </div>
     <div class="col-md-10 mt20">
       <div class="vertical-center container">
+        <div class="date-form">
+          <?php include('src/date-form.php') ?>
+        </div>
         <ul id="tabs">
           <li><a href="#" name="tab1">FB CAMPS</a></li>
           <li><a href="#" name="tab2">PPC CAMPS</a></li>

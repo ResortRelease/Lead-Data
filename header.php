@@ -1,7 +1,17 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php'; // Autoload files using Composer autoload
 require_once __DIR__ . '/src/Initialize.php';
-session_start();
+session_start(); 
+
+  if (!isset($_SESSION['username'])) {
+  	$_SESSION['msg'] = "You must log in first";
+  	header('location: login.php');
+  }
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['username']);
+  	header("location: login.php");
+  }
 // Set Last Month Date for SQL Select
 $lastMonthFirst = date('Y-m-d',strtotime('first day of last month'));
 $lastMonthLast = date('Y-m-d',strtotime('last day of last month'));
@@ -82,3 +92,4 @@ if (isset($_POST["period"])) {
             }
         ?>
     </p>
+    <a href="./?logout='1'" class="logout">Log Out</a>
