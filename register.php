@@ -15,6 +15,7 @@
 <head>
   <title>Registration</title>
   <link rel="stylesheet" href="/src/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
 </head>
 
 <body>
