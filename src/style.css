@@ -1,0 +1,250 @@
+:root {
+  --main-bg: #33333D;
+  --secondary-bg: #B3B3CE;
+  --third-color: #D7C19C;
+}
+html,body {
+  min-width: 100%;
+  min-height:100%;
+}
+body {
+  background-color: var(--main-bg)!important;
+  height:100%!important;
+  padding-bottom:60px;
+}
+.main {
+  min-height: 100vh;
+}
+.main p {
+  color:var(--secondary-bg);
+}
+/* MENUS */
+.menu-item{
+  position: relative;
+}
+.menu-item .current-menu {
+  position: absolute;
+  background: #D7C19C;
+  right: 5px;
+  bottom: 0px;
+  padding: 0px 8px;
+  border-radius: 10px;
+  box-shadow: -1px 1px 4px rgba(19, 19, 31, 0.5);
+  font-size: 12px;
+}
+.sidebar {
+  background-color: var(--secondary-bg)!important;
+  min-height: 100vh;
+  text-align: center;
+  padding:30px;
+  color: var(--main-bg);
+}
+.button {
+  border-radius: 8px;
+  padding:5px 20px;
+  width: fit-content;
+  cursor: pointer;
+}
+.secondary {
+  background: var(--secondary-bg);
+  color: var(--main-bg);
+}
+.mt20 {
+  margin-top:20px;
+}
+.mt30 {
+  margin-top:30px;
+}
+.mt40 {
+  margin-top:40px;
+}
+.main-d-menu {
+  border-radius: 8px;
+  border: 1px solid var(--secondary-bg);
+  padding:80px;
+  text-align: center;
+}
+img.fit {
+  max-height: 100px;
+  margin: 0 auto;
+}
+.title {
+  position: absolute;
+  right: -20px;
+  bottom: 31px;
+  background: white;
+  font-size: 12px;
+  padding: 0px 7px;
+  border-radius: 10px;
+  opacity: 0.8;
+}
+.selected-icon{
+  background: var(--main-bg);
+  color: var(--secondary-bg);
+  border-radius: 50px;
+  padding: 8px;
+  font-size: 0.5em;
+  position: relative;
+  top: -5px;
+  left: -5px;
+}
+.text-third {
+  color: var(--third-color)!important;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+.gorilla-logo{
+  width:100px;
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+}
+a {
+  text-decoration:none!important;
+}
+.primary {
+  background: var(--secondary-bg);
+  color:var(--main-bg);
+}
+.primary.select {
+  width: 500px;
+  text-align: center;
+  padding: 20px;
+  margin:0 auto;
+}
+.block{
+  border-radius: 8px;
+  padding:30px;
+  text-align: center;
+  min-height: 210px;
+}
+.vertical-center{
+  margin-top:15vh;
+}
+.progress {
+  height: 30px!important;
+  background: var(--main-bg)!important;
+}
+#error {
+  color: #c34e4e;
+  text-align:left!important;
+}
+/* TABLES */
+.table-container {
+  background: #D7C19C;
+  padding: 40px;
+}
+.table-container table {
+  width:100%;
+}
+.table-container table tr {
+  border-bottom: 1px solid #B89C84;
+  padding: 5px 0;
+  height: 34px;
+}
+#content
+{
+    /* background: #fff; */
+    padding: 2em;
+	/* height: 220px; */
+	position: relative;
+	z-index: 2;	
+    -moz-border-radius: 0 5px 5px 5px;
+    -webkit-border-radius: 0 5px 5px 5px;
+    border-radius: 0 5px 5px 5px;
+    -moz-box-shadow: 0 -2px 3px -2px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 -2px 3px -2px rgba(0, 0, 0, .5);
+    box-shadow: 0 -2px 3px -2px rgba(0, 0, 0, .5);
+}
+#tabs{
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#tabs li{
+  float: left;
+  margin: 0 .5em 0 0;
+}
+
+#tabs a{
+  position: relative;
+  background: #B89C84;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#D7C19C), to(#B89C84));
+  background-image: -webkit-linear-gradient(top, #D7C19C, #B89C84);
+  background-image: -moz-linear-gradient(top, #D7C19C, #B89C84);
+  background-image: -ms-linear-gradient(top, #D7C19C, #B89C84);
+  background-image: -o-linear-gradient(top, #D7C19C, #B89C84);
+  background-image: linear-gradient(to bottom, #D7C19C, #B89C84);  
+  padding: .7em 3.5em;
+  float: left;
+  text-decoration: none;
+  color: #444;
+  text-shadow: 0 1px 0 rgba(215, 192, 156, 0.8);
+  /* -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+  border-radius: 5px 0 0 0; */
+  -moz-box-shadow: 0 2px 2px rgba(0,0,0,.4);
+  -webkit-box-shadow: 0 2px 2px rgba(0,0,0,.4);
+  box-shadow: 0 2px 2px rgba(0,0,0,.4);
+}
+
+#tabs a:hover,
+#tabs a:hover::after,
+#tabs a:focus,
+#tabs a:focus::after{
+  background: #D7C19C;
+}
+
+#tabs a:focus{
+  outline: 0;
+}
+
+#tabs a::after{
+  content:'';
+  position:absolute;
+  z-index: 1;
+  top: 0;
+  right: -.5em;  
+  bottom: 0;
+  width: 1em;
+  height: 50px;
+  background: #B89C84;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#D7C19C), to(#B89C84));
+  background-image: -webkit-linear-gradient(top, #D7C19C, #B89C84);
+  background-image: -moz-linear-gradient(top, #D7C19C, #B89C84);
+  background-image: -ms-linear-gradient(top, #D7C19C, #B89C84);
+  background-image: -o-linear-gradient(top, #D7C19C, #B89C84);
+  background-image: linear-gradient(to bottom, #D7C19C, #B89C84);  
+  -moz-box-shadow: 2px 2px 2px rgba(0,0,0,.4);
+  -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,.4);
+  box-shadow: 2px 2px 2px rgba(0,0,0,.4);
+  -webkit-transform: skew(10deg);
+  -moz-transform: skew(10deg);
+  -ms-transform: skew(10deg);
+  -o-transform: skew(10deg);
+  transform: skew(10deg);
+  /* -webkit-border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+  border-radius: 0 5px 0 0;   */
+}
+
+#tabs #current a{
+  background: #D7C19C;
+  z-index: 3;
+}
+
+#tabs #current a::after{
+  background: #D7C19C;
+  z-index: 3;
+}
+.elform::hover {
+  cursor:pointer;
+}

@@ -1,6 +1,5 @@
 <?php
-    echo "<" .$lastMonthFirst . "> to ";
-    echo "<" .$lastMonthLast. "> ";  
+
     $sqlSelect = "SELECT * FROM `leads-tbl` WHERE datecr BETWEEN '$lastMonthFirst' AND '$lastMonthLast' ORDER BY datecr DESC";
     $result = mysqli_query($conn, $sqlSelect);
     $message = mysqli_error($conn);

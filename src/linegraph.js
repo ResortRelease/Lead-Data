@@ -4,7 +4,7 @@ $(document).ready(function(){
     url: "/src/leads-vs-sold.php",
     type: "GET",
     success: function(data){
-      console.log(data);
+      // console.log(data);
 
       var leads = [];
       var sold = [];
