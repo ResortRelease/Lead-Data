@@ -10,7 +10,7 @@
 						<div class="col-md-3">
 							<div class="button secondary">Dashboard</div>
 						</div>
-						<div class="col-md-9 text-left"><p class="text-third">GORILLA MARKETING KPI</p></div>
+						<div class="col-md-9 text-left"></div>
 					</div>
 					<!-- Main Dashboard -->
 					<div class="row">
