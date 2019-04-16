@@ -149,6 +149,7 @@ a {
   padding: 5px 0;
   height: 34px;
 }
+.table-container table tr:nth-child(odd) {background: rgb(212, 186, 145)}
 #content
 {
     /* background: #fff; */
@@ -247,7 +248,7 @@ a {
   background: #D7C19C;
   z-index: 3;
 }
-.elform::hover {
+.elForm:hover {
   cursor:pointer;
 } 
 /* DATE INPUT FORM */

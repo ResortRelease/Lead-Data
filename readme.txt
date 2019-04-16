@@ -1,3 +1,33 @@
 #Set AWS env variables
 https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html
 
+ON DUPLICATE KEY UPDATE
+                      `dealid` = $column[0],
+                      `status` = $column[1],
+                      `EmailAddress` = $column[2],
+                      `HomePhone` = $column[3],
+                      `SecondaryPhone` = $column[4],
+                      `Brand` = $column[5],
+                      `source` = $column[6],
+                      `SubSource` = $column[7],
+                      `datecr` = $datecr,
+                      `dateASAP` = $dateASAP,
+                      `salesdate` = $salesdate,
+                      `cancelsale` = $column[11],
+                      `utm_term` = $column[12],
+                      `utm_campaign` = $column[13],
+                      `utm_source` = $column[14],
+                      `utm_medium` = $column[15],
+                      `utm_content` = $column[16],
+                      `hearduson` = $column[17],
+                      `total sold` = $column[18],
+                      `days` = $column[19],
+                      `was sold` = $column[20],
+                      `hasform` = $column[21],
+                      `hasapp` = $column[22],
+                      `State` = $column[23],
+                      `sold_tr_rev` = $column[24],
+                      `sold_tr_rev_net` = $column[25],
+                      `sold_mt_rev` = $column[26],
+                      `sold_mt_rev_net` = $column[27],
+                      `Nurture` = $column[28]
