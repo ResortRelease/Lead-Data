@@ -67,7 +67,7 @@
             $percentage = ($currentRecord/$totalNumRecords*100);
             echo "<script>
             document.getElementById('error').innerHTML = '" . $message . "';
-            jQuery('#myBar').css('width', '" . $percentage . "%').html(" . round($percentage,0) . ");
+            jQuery('#myBar').css('width', '" . $percentage . "%').html(" . round($percentage,0) . " + '%');
             </script>";
             if (! empty($result)) {
                 $type = "success";
@@ -78,6 +78,10 @@
                 echo mysqli_error($conn);
             }
         }
+        $updated =  "Last Updated: " . date("m/d/y") . "\n"; 
+        $txt_file = "lastUpdated.txt";
+        $files = file_put_contents($txt_file, $updated);
+        $fileContent = file_get_contents($txt_file);
         fclose($file);
         mysqli_close($conn);
         exit;

@@ -4,7 +4,7 @@
       <div class="col-md-4">
         <a href="/load-data.php">
           <img src="/assets/icons/load-data.svg" alt="" class="fit">
-          <p class="mt20">LOAD DATA<br><small>RUN 04/10/2019</small></p>
+          <p class="mt20">LOAD DATA<br><small><?php echo $lastUpdate ?></small></p>
         </a>
       </div>
       <div class="col-md-4">

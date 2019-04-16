@@ -12,7 +12,7 @@
       <?php include('src/left-menu.php'); ?>
     </div>
     <div class="col-md-10 mt20">
-      <div class="text-center" id="error"><?php $message ?></div>
+      <div class="text-center" id="error"><?php echo $message ?></div>
       <div class="row vertical-center">
         <div class="col-md-4">
           <a href="https://www.resortreleasecrm.com/29a301fb-5043-46c9-b036-560c9d584ecd.php" target="_blank">
@@ -20,7 +20,7 @@
               <p class="text-uppercase">step 1</p>
               <h2 class="text-uppercase">update s3</h2>
               <br>
-              <p class="text-capitalize">last update </p>
+              <p class="text-capitalize"><?php echo $lastUpdate ?></p>
             </div>
           </a>
         </div>

@@ -71,7 +71,7 @@
                 echo mysqli_error($conn);
             }
         }
-        $updated =  "Last Updated: " . date("m/d/y @ h:i A") . "\n"; 
+        $updated =  "Last Updated: " . date("m/d/y") . "\n"; 
         $txt_file = "lastUpdated.txt";
         $files = file_put_contents($txt_file, $updated);
         $fileContent = file_get_contents($txt_file);

@@ -73,6 +73,8 @@ if (isset($_POST["period"])) {
     $_SESSION['from'] = $thisMonthFirst;
     $_SESSION['to'] = $thisMonthLast;
 }
+$txt_file = "lastUpdated.txt";
+$lastUpdate = file_get_contents($txt_file);
 ?>
 <!DOCTYPE html>
 <html>
@@ -97,4 +99,4 @@ if (isset($_POST["period"])) {
             }
         ?>
     </p>
-    <a href="./?logout='1'" class="logout">Log Out</a>
+    <a href="./?logout='1'" class="logout">Log Out (<?php echo $_SESSION['username'] ?>)</a>
