@@ -32,11 +32,11 @@
     </div>
     <div class="row text-center menu-item">
       <div class="tab-title" style="width:60px;height:auto;margin:12px auto;">
-        <a href="/graphs.php"><img src="/assets/icons/graphs.svg" alt="" class="img-fluid"></a>
+        <a href="/results.php"><img src="/assets/icons/graphs.svg" alt="" class="img-fluid"></a>
       </div>
-      <div class="title" style="display:none;">Graphs</div>
-      <?php if($menu == 'graphs') : ?>
-        <div class="current-menu">Graphs</div>
+      <div class="title" style="display:none;">Results</div>
+      <?php if($menu == 'results') : ?>
+        <div class="current-menu">Results</div>
       <?php endif ?>
     </div>
     <div class="row text-center menu-item">

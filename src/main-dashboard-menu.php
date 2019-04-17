@@ -22,9 +22,9 @@
     </div>
     <div class="row">
       <div class="col-md-4">
-        <a href="/graphs.php">
+        <a href="/results.php">
           <img src="/assets/icons/graphs.svg" alt="" class="fit">
-          <p class="mt20">GRAPHS</p>            
+          <p class="mt20">RESULTS</p>            
         </a>    
       </div>
       <div class="col-md-4">
