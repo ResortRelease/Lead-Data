@@ -1,5 +1,8 @@
-<?php include('header.php') ?>
-<?php $menu = 'results'; ?>
+<?php 
+include('header.php');
+$menu = 'results';
+?>
+
 <style>
   .progress-bar {
     background-color: #8CC63F;
