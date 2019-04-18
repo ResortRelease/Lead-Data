@@ -723,6 +723,7 @@ $colors = mysqli_query($conn, $sqlSelect2);
 				if(elColor == "red") { elColor = "#964444"}
 				if(elColor == "yellow") { elColor = "#868037"}
 				if(elColor == "green") { elColor = "#447d44"}
+				if(elColor == "none") { elColor = "none"}
 				jQuery(outer).css('background', elColor);
 				var counter = 0;
 				var clickedDate;
@@ -746,6 +747,8 @@ $colors = mysqli_query($conn, $sqlSelect2);
 					}
 					if (counter == 4) {
 						jQuery(this).css('background', 'none');
+						color = 'none';
+						dateitem = {id:elDate, color:color};
 						counter = 0;
 					}
 					function pushToArray(arr, obj) {
