@@ -31,6 +31,12 @@ body {
   box-shadow: -1px 1px 4px rgba(19, 19, 31, 0.5);
   font-size: 12px;
 }
+.menu-item.calendar-item{
+  position: fixed;
+  top: 0px;
+  right: 70px;
+  z-index: 9;
+}
 .sidebar {
   background-color: var(--secondary-bg)!important;
   min-height: 100vh;
@@ -135,6 +141,9 @@ a {
 #error {
   color: #c34e4e;
   text-align:left!important;
+}
+#success {
+  color: #5bc34e;
 }
 /* TABLES */
 .table-container {

@@ -18,6 +18,27 @@ while ($row = mysqli_fetch_array($result)) {
 		$prevDay = $day;
 	}
 }
+// ADD LEADS AND SALES
+$sqlSelect = "SELECT * FROM `leads-tbl` WHERE salesdate BETWEEN '2019-01-01' AND '$thisMonthLastPlusOne' 
+ORDER BY salesdate ASC";
+$result = mysqli_query($conn, $sqlSelect);
+$message = mysqli_error($conn);
+$data2 = [];
+$prevDay = $thisMonthFirst;
+while ($row = mysqli_fetch_array($result)) {
+	$day = $row['salesdate'];
+	if($day == $prevDay){
+		$sales++;
+	} else {
+		$data2[$prevDay] = $sales;
+		$sales = 1;
+		$prevDay = $day;
+	}
+}
+
+// SELECT ALL THE COLORS
+$sqlSelect2 = "SELECT * FROM `calendar`";
+$colors = mysqli_query($conn, $sqlSelect2);
 
 ?>
 <style>
@@ -35,10 +56,12 @@ while ($row = mysqli_fetch_array($result)) {
 	.header {
 		height: 50px;
 		width: 720px;
-		background: rgba(66, 66, 66, 1);
+		background: var(--main-bg);
+		border: 2px solid var(--secondary-bg);
 		text-align: center;
 		position: relative;
 		z-index: 100;
+		color: var(--secondary-bg);
 	}
 
 	.header h1 {
@@ -63,13 +86,13 @@ while ($row = mysqli_fetch_array($result)) {
 
 	.left {
 		border-width: 7.5px 10px 7.5px 0;
-		border-color: transparent rgba(160, 159, 160, 1) transparent transparent;
+		border-color: transparent var(--secondary-bg) transparent transparent;
 		left: 20px;
 	}
 
 	.right {
 		border-width: 7.5px 0 7.5px 10px;
-		border-color: transparent transparent transparent rgba(160, 159, 160, 1);
+		border-color: transparent transparent transparent var(--secondary-bg);
 		right: 20px;
 	}
 
@@ -169,11 +192,19 @@ while ($row = mysqli_fetch_array($result)) {
 		margin: 0 1px;
 	}
 
-	.day-leads {
+	.day-leads, .day-sales {
 		font-size: 12px;
 		margin: 0 auto;
 		border: 1px solid rgba(255, 255, 255, 0.15);
 		padding: 1px;
+	}
+	.day-leads{
+		float:left;
+		border-right:none;
+	}
+	.day-sales{
+		float:right;
+		border-left:none;
 	}
 
 	.blue {
@@ -525,12 +556,20 @@ while ($row = mysqli_fetch_array($result)) {
 		</div>
 		<div class="col-md-10 mt20">
 			<div class="vertical-center container">
+				<div id="error"></div>
 				<div id="calendar"></div>
+				<div class="row mt40">
+					<button onclick="postColors()" class="go" style="margin:0 auto;width:230px;cursor:pointer;font-size:14px;">SAVE</button>
+				</div>
+				<div id="success" class="text-center"></div>
 			</div>
 		</div>
 	</div>
 	<script>
 		var obj = JSON.parse('<?php echo json_encode($data) ?>');
+		var obj2 = JSON.parse('<?php echo json_encode($data2) ?>');
+		var datecolor = [];
+		var dateitem;
 		//  console.log(obj);
 		! function () {
 
@@ -668,26 +707,58 @@ while ($row = mysqli_fetch_array($result)) {
 			Calendar.prototype.drawDay = function (day) {
 				var self = this;
 				this.getWeek(day);
-
+				var elDate = day.format('YYYY-MM-DD');
+				// *************
+				var elColor;
+				// *************
+				elDate = String(elDate);
 				//Outer Day
 				var outer = createElement('div', this.getDayClass(day));
+				<?php while ($rr = mysqli_fetch_array($colors)) { ?>
+					if(elDate == "<?= $rr['id'] ?>"){
+						elColor = "<?= $rr['color'] ?>";
+						console.log(elColor);
+					}
+				<?php } ?>
+				if(elColor == "red") { elColor = "#964444"}
+				if(elColor == "yellow") { elColor = "#868037"}
+				if(elColor == "green") { elColor = "#447d44"}
+				jQuery(outer).css('background', elColor);
 				var counter = 0;
+				var clickedDate;
 				outer.addEventListener('click', function () {
 					// self.openDay(this);    // * DO NOT OPEN DAY
 					counter++;
 					if (counter == 1) {
 						jQuery(this).css('background', '#964444');
+						color = 'red';
+						dateitem = {id:elDate, color:color};
 					}
 					if (counter == 2) {
 						jQuery(this).css('background', '#447d44');
+						color = 'green';
+						dateitem = {id:elDate, color:color};
 					}
 					if (counter == 3) {
 						jQuery(this).css('background', '#868037');
+						color = 'yellow';
+						dateitem = {id:elDate, color:color};
 					}
 					if (counter == 4) {
 						jQuery(this).css('background', 'none');
 						counter = 0;
 					}
+					function pushToArray(arr, obj) {
+							const index = arr.findIndex((e) => e.id === obj.id);
+
+							if (index === -1) {
+									arr.push(obj);
+							} else {
+									arr[index] = obj;
+							}
+					}
+					pushToArray(datecolor, dateitem);
+				
 				});
 				//Day Name
 				var name = createElement('div', 'day-name', day.format('ddd'));
@@ -699,20 +770,26 @@ while ($row = mysqli_fetch_array($result)) {
 				//Events
 				var events = createElement('div', 'day-events');
 
-				// poop
+				// addCount
 				this.drawEvents(day, events);
 
 				outer.appendChild(name);
 				outer.appendChild(number);
 				// outer.appendChild(events);
-				var elDate = day.format('YYYY-MM-DD');
-				elDate = String(elDate);
+				
 				// console.log(elDate);
 				const entries = Object.entries(obj)
 				for (const [key, val] of entries) {
 					if (key == elDate) {
-						var poop = createElement('div', 'day-leads', 'Leads ' + val);
-						outer.appendChild(poop);
+						var addCount = createElement('div', 'day-leads', 'L: ' + val);
+						outer.appendChild(addCount);
+					}
+				}
+				const entries2 = Object.entries(obj2)
+				for (const [key, val] of entries2) {
+					if (key == elDate) {
+						var addCount = createElement('div', 'day-sales', 'S: ' + val);
+						outer.appendChild(addCount);
 					}
 				}
 				this.week.appendChild(outer);
@@ -889,20 +966,20 @@ while ($row = mysqli_fetch_array($result)) {
 
 		! function () {
 			var data = [{
-					eventName: 'Lunch Meeting w/ Mark',
-					calendar: 'Bad',
+					eventName: '',
+					calendar: 'Text Blast',
 					color: 'red'
 				},
 
 				{
-					eventName: 'Game vs Portalnd',
-					calendar: 'Good',
+					eventName: '',
+					calendar: 'Email',
 					color: 'green'
 				},
 
 				{
-					eventName: 'School Play',
-					calendar: 'Ok',
+					eventName: '',
+					calendar: 'Ringless VM',
 					color: 'yellow'
 				}
 			];
@@ -916,5 +993,20 @@ while ($row = mysqli_fetch_array($result)) {
 			var calendar = new Calendar('#calendar', data);
 
 		}();
+
+		function postColors(){	
+			jQuery.ajax({
+				type: "POST",
+				url: "/saveColors.php",
+				data: {datecolor:JSON.stringify(datecolor)},
+				async: true,
+				success: function(data) {
+					jQuery('#success').html(data);
+				},
+				error: function(data) {
+					jQuery('#error').html(data);
+				}
+			})
+		}
 	</script>
 	<?php include('footer.php') ?>

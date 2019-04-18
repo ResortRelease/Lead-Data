@@ -57,6 +57,14 @@
         <div class="current-menu">Sales</div>
       <?php endif ?>
     </div>
-
   </div>
+</div>
+<div class="row text-center menu-item calendar-item">
+  <div class="tab-title" style="width:60px;height:auto;margin:12px auto;">
+    <a href="/calendar.php"><img src="/assets/icons/calendar.svg" alt="" class="img-fluid"></a>
+  </div>
+  <div class="title" style="display:none;">Calendar</div>
+  <?php if($menu == 'calendar') : ?>
+    <div class="current-menu">Calendar</div>
+  <?php endif ?>
 </div>
