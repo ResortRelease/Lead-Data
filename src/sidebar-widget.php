@@ -1,4 +1,12 @@
-<h4 class="text-uppercase"> <span class="selected-icon">>></span>Current month</h4>
+<p class="text-uppercase text-left"> <span class="selected-icon">>></span>
+<?php 
+            if (isset($_SESSION["from"])) {
+              echo "FROM: <u>" . $_SESSION['from'] . "</u><br> TO: <u>" . $_SESSION['to'] . "</u>";
+            }else{
+              echo "Current Month";
+            }
+        ?>
+</p>
 <?php include('sidebar-widget-leads.php') ?>
 <div class="text-center mt30">
   <h4 class="text-uppercase">new leads</h4>
