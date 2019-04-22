@@ -984,7 +984,7 @@ $colors = mysqli_query($conn, $sqlSelect2);
 
 				{
 					eventName: '',
-					calendar: 'Ringless VM',
+					calendar: 'Both',
 					color: 'yellow'
 				}
 			];
