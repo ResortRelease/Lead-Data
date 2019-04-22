@@ -83,6 +83,7 @@ img.fit {
   padding: 0px 7px;
   border-radius: 10px;
   opacity: 0.8;
+  pointer-events: none;
 }
 .selected-icon{
   background: var(--main-bg);
@@ -265,11 +266,20 @@ a {
 form {
   margin: 0 auto;
 }   
-input[type='date']{
+input:focus, select:focus {
+  outline: none
+}
+input[type='date'], select{
   background: var(--main-bg);
   border: 1px solid var(--secondary-bg);
   color:var(--secondary-bg);
   height: 45px;
+}
+select {
+  display: block;
+  margin-top: 30px;
+  width: 450px;
+  height: 420px!important;
 }
 ::-webkit-datetime-edit { padding: 1em; }
 ::-webkit-inner-spin-button { display: none; }

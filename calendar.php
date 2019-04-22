@@ -729,6 +729,7 @@ $colors = mysqli_query($conn, $sqlSelect2);
 				var clickedDate;
 				outer.addEventListener('click', function () {
 					// self.openDay(this);    // * DO NOT OPEN DAY
+					<?php if($_SESSION['username'] == "aamg37" || $_SESSION['username'] == "alfredop"): ?>
 					counter++;
 					if (counter == 1) {
 						jQuery(this).css('background', '#964444');
@@ -751,6 +752,7 @@ $colors = mysqli_query($conn, $sqlSelect2);
 						dateitem = {id:elDate, color:color};
 						counter = 0;
 					}
+				<?php endif; ?>
 					function pushToArray(arr, obj) {
 							const index = arr.findIndex((e) => e.id === obj.id);
 
